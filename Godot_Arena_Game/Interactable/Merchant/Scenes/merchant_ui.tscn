@@ -1,0 +1,216 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbllu7mbpwfh3"]
+
+[ext_resource type="Script" path="res://Interactable/Merchant/Scripts/merchant_ui.gd" id="1_yptee"]
+[ext_resource type="Texture2D" uid="uid://w8k1jsfihrc2" path="res://GUI/Inventory/Sprites/Inventory.png" id="2_rdd7u"]
+[ext_resource type="PackedScene" uid="uid://crih7f1bqkxbl" path="res://Interactable/Merchant/Scenes/merchant_slot.tscn" id="3_5ikai"]
+[ext_resource type="AudioStream" uid="uid://5q6n7v6un66c" path="res://Characters/Player/Sounds/Shuriken_Sounds/catch.wav" id="4_ihn3x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7jfd"]
+atlas = ExtResource("2_rdd7u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xowyh"]
+texture = SubResource("AtlasTexture_d7jfd")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[node name="MerchantUI" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_yptee")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.15, 0.15, 0.15, 0.705882)
+
+[node name="ShopLabel" type="Label" parent="Control"]
+modulate = Color(1, 1, 1, 0.666667)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 85.0
+offset_top = -97.0
+offset_right = 161.0
+offset_bottom = -74.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+text = "Shop Inventory
+"
+
+[node name="PointsContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 1.0
+offset_right = 224.0
+offset_bottom = 41.0
+
+[node name="Points" type="Label" parent="Control/PointsContainer"]
+modulate = Color(1, 1, 1, 0.666667)
+layout_mode = 2
+text = "(point amount)
+"
+
+[node name="PlayerLabel" type="Label" parent="Control"]
+modulate = Color(1, 1, 1, 0.666667)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.0
+offset_top = -95.0
+offset_right = -36.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+text = "Player Inventory"
+
+[node name="ItemDescription" type="Label" parent="Control"]
+modulate = Color(1, 1, 1, 0.666667)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = 70.0
+offset_right = -12.0
+offset_bottom = 95.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "Red liquid that restores your health!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="PlayerInventory" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 155.0
+offset_bottom = 180.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_xowyh")
+
+[node name="GridContainer" type="GridContainer" parent="Control/PlayerInventory"]
+layout_mode = 2
+columns = 4
+
+[node name="MerchantSlot" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot2" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot3" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot4" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot5" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot6" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot7" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot8" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot9" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot10" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot11" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot12" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantInventory" type="PanelContainer" parent="Control"]
+clip_contents = true
+layout_mode = 0
+offset_left = 171.0
+offset_top = 56.0
+offset_right = 318.0
+offset_bottom = 180.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_xowyh")
+
+[node name="GridContainer" type="GridContainer" parent="Control/MerchantInventory"]
+layout_mode = 2
+columns = 4
+
+[node name="MerchantSlot" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot2" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot3" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot4" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot5" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot6" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot7" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot8" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot9" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot10" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot11" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot12" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="Button_close" type="Button" parent="Control"]
+custom_minimum_size = Vector2(70, 35)
+layout_mode = 2
+offset_left = 218.0
+offset_top = 189.0
+offset_right = 288.0
+offset_bottom = 224.0
+text = "Close Shop"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
+stream = ExtResource("4_ihn3x")
+max_polyphony = 4

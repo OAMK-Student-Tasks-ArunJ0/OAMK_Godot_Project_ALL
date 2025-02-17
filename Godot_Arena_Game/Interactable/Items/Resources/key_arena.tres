@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://y6ouymn7bw81"]
+
+[ext_resource type="Script" path="res://Interactable/Items/Scripts/item_effect.gd" id="1_ksqyt"]
+[ext_resource type="Script" path="res://Interactable/Items/Scripts/item_data.gd" id="2_8vh0v"]
+[ext_resource type="Texture2D" uid="uid://b3otkdccroktl" path="res://Interactable/Items/Sprites/UndeadPackSprites/SkeletonKey.png" id="3_0wy6c"]
+
+[resource]
+script = ExtResource("2_8vh0v")
+name = "Key"
+description = "This is a key, it will open a door!"
+texture = ExtResource("3_0wy6c")
+effects = Array[ExtResource("1_ksqyt")]([])
+sell_value = 0

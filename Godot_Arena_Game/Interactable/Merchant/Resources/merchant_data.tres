@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MerchantData" load_steps=3 format=3 uid="uid://idr5nuqwcsvu"]
+
+[ext_resource type="Resource" uid="uid://beuqi0gykfv45" path="res://Interactable/Merchant/Resources/merchant_inventory.tres" id="1_hx2r1"]
+[ext_resource type="Script" path="res://Interactable/Merchant/Scripts/merchant_data.gd" id="1_t5j4e"]
+
+[resource]
+script = ExtResource("1_t5j4e")
+sell_value_multiplier = 0.5
+inventory = ExtResource("1_hx2r1")

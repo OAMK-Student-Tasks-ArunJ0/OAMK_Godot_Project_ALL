@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh3xm5u5iasgp"]
+
+[ext_resource type="Script" path="res://GUI/MainMenu/Scripts/main_menu.gd" id="1_m2u4p"]
+[ext_resource type="PackedScene" uid="uid://d0h6g8j2jx8pe" path="res://GUI/MainMenu/Scenes/settings_menu.tscn" id="2_settings"]
+
+[node name="MainMenu" type="CanvasLayer"]
+process_mode = 3
+layer = 4
+script = ExtResource("1_m2u4p")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_right = 340.0
+offset_bottom = 260.0
+color = Color(0.392157, 0.392157, 0.392157, 1)
+
+[node name="MainPanel" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 90.0
+offset_top = 50.0
+offset_right = -90.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ContinueButton" type="Button" parent="Control/MainPanel"]
+custom_minimum_size = Vector2(0, 37)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Continue"
+
+[node name="NewGameButton" type="Button" parent="Control/MainPanel"]
+custom_minimum_size = Vector2(0, 37)
+layout_mode = 2
+size_flags_vertical = 3
+text = "New Game"
+
+[node name="SettingsButton" type="Button" parent="Control/MainPanel"]
+custom_minimum_size = Vector2(0, 37)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Settings"
+
+[node name="ExitButton" type="Button" parent="Control/MainPanel"]
+custom_minimum_size = Vector2(0, 37)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Exit"
+
+[node name="SettingsMenu" parent="Control" instance=ExtResource("2_settings")]
+visible = false
+layout_mode = 1

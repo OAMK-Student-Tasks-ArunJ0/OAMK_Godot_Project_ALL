@@ -1,0 +1,167 @@
+[gd_scene load_steps=7 format=3 uid="uid://dn4civwvrmjvb"]
+
+[ext_resource type="Script" path="res://GUI/HUD/Scripts/player_hud.gd" id="1_r3gwt"]
+[ext_resource type="Texture2D" uid="uid://dece8pnx4athx" path="res://GUI/HUD/Sprites/gui-health.png" id="2_5w3p1"]
+[ext_resource type="PackedScene" uid="uid://wdaskarv20p3" path="res://GUI/HUD/Scenes/health_bar.tscn" id="3_7jfe3"]
+
+[sub_resource type="Animation" id="Animation_vx30s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Message_Label:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Message_Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dgv2v"]
+resource_name = "message_animation"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Message_Label:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Message_Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rm8am"]
+_data = {
+"RESET": SubResource("Animation_vx30s"),
+"message_animation": SubResource("Animation_dgv2v")
+}
+
+[node name="PlayerHud" type="CanvasLayer"]
+layer = 2
+script = ExtResource("1_r3gwt")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(292, 7)
+texture = ExtResource("2_5w3p1")
+region_enabled = true
+region_rect = Rect2(29, 0, 34, 8)
+
+[node name="HFlowContainer" type="HFlowContainer" parent="Control"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 182.0
+offset_bottom = 23.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 2
+
+[node name="HealthBar" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="HealthBar2" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="HealthBar3" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="HealthBar4" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="HealthBar5" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="HealthBar6" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="HealthBar7" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="HealthBar8" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="HealthBar9" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="HealthBar10" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="HealthBar11" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="HealthBar12" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="HealthBar13" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="HealthBar14" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="HealthBar15" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="HealthBar16" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="HealthBar17" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="HealthBar18" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="HealthBar19" parent="Control/HFlowContainer" instance=ExtResource("3_7jfe3")]
+layout_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
+libraries = {
+"": SubResource("AnimationLibrary_rm8am")
+}
+autoplay = "message_animation"
+
+[node name="Message_Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 244.0
+offset_right = 330.0
+offset_bottom = 260.0
+theme_override_font_sizes/font_size = 11
+horizontal_alignment = 2

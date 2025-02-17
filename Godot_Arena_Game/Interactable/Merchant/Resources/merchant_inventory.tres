@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="InventoryData" load_steps=11 format=3 uid="uid://beuqi0gykfv45"]
+
+[ext_resource type="Script" path="res://GUI/Inventory/Scripts/inventory_data.gd" id="1_arfvf"]
+[ext_resource type="Script" path="res://GUI/Inventory/Scripts/slot_data.gd" id="2_4wm0i"]
+[ext_resource type="Resource" uid="uid://c07po0r2yi0pi" path="res://Interactable/Items/Resources/potion.tres" id="3_aomt1"]
+[ext_resource type="Resource" uid="uid://dvkprq4er1cgn" path="res://Interactable/Items/Resources/apple.tres" id="4_l2mn3"]
+[ext_resource type="Resource" uid="uid://b4inupoclw672" path="res://Interactable/Items/Resources/health_upgrade.tres" id="5_qgmpe"]
+[ext_resource type="Resource" uid="uid://cwkqtsqp7xqlg" path="res://Interactable/Items/Resources/damage_upgrade.tres" id="6_aw1wh"]
+
+[sub_resource type="Resource" id="Resource_y6si2"]
+script = ExtResource("2_4wm0i")
+item_data = ExtResource("3_aomt1")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_yurjo"]
+script = ExtResource("2_4wm0i")
+item_data = ExtResource("4_l2mn3")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_vfdfi"]
+script = ExtResource("2_4wm0i")
+item_data = ExtResource("5_qgmpe")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_jqx5q"]
+script = ExtResource("2_4wm0i")
+item_data = ExtResource("6_aw1wh")
+quantity = 1
+
+[resource]
+script = ExtResource("1_arfvf")
+slots = Array[ExtResource("2_4wm0i")]([SubResource("Resource_y6si2"), SubResource("Resource_yurjo"), SubResource("Resource_vfdfi"), SubResource("Resource_jqx5q"), null, null, null, null, null, null, null, null])

@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://delcj7qj1eb6"]
+
+[sub_resource type="GDScript" id="GDScript_wssvd"]
+script/source = "# item_slot_shop.gd
+extends HBoxContainer
+
+@onready var item_name_label: Label = $item_name
+@onready var item_quantity_label: Label = $item_quantity
+@onready var buy_sell_button: Button = $buy_sell_button
+
+var item_data: ItemData
+var quantity: int = 0
+var is_buy_tab: bool = true  # Set to false for sell tab
+
+signal buy_pressed(item_data: ItemData)
+signal sell_pressed(item_data: ItemData)
+
+func setup(item_data: ItemData, quantity: int, is_buy_tab: bool = true) -> void:
+	if item_name_label == null:
+		print(\"item_name_label is null. Check the scene structure.\")
+		return
+	
+	self.item_data = item_data
+	self.quantity = quantity
+	self.is_buy_tab = is_buy_tab
+	
+	item_name_label.text = item_data.name
+	item_quantity_label.text = str(quantity)
+	
+	if is_buy_tab:
+		buy_sell_button.text = \"Buy\"
+	else:
+		buy_sell_button.text = \"Sell\"
+
+
+
+func _on_buy_sell_button_pressed() -> void:
+	if is_buy_tab:
+		emit_signal(\"buy_pressed\", item_data)
+	else:
+		emit_signal(\"sell_pressed\", item_data)
+"
+
+[node name="ItemSlotShop" type="HBoxContainer"]
+script = SubResource("GDScript_wssvd")
+
+[node name="item_name" type="Label" parent="."]
+layout_mode = 2
+text = "item_name"
+
+[node name="item_quantity" type="Label" parent="."]
+layout_mode = 2
+text = "item_quantity"
+
+[node name="buy_sell_button" type="Button" parent="."]
+layout_mode = 2
+text = "buy/sell"

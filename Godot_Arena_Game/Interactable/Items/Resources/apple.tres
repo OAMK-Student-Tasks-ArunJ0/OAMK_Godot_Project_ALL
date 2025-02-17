@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=6 format=3 uid="uid://dvkprq4er1cgn"]
+
+[ext_resource type="Script" path="res://Interactable/Items/Scripts/item_effect.gd" id="1_snmgt"]
+[ext_resource type="Script" path="res://Interactable/Items/Scripts/item_effect_heal.gd" id="2_k7wat"]
+[ext_resource type="Script" path="res://Interactable/Items/Scripts/item_data.gd" id="2_tiftm"]
+[ext_resource type="Texture2D" uid="uid://c1byy4b8ve88n" path="res://Interactable/Items/Sprites/UndeadPackSprites/Icon20.png" id="4_5ewx2"]
+
+[sub_resource type="Resource" id="Resource_11svw"]
+script = ExtResource("2_k7wat")
+heal_amount = 1
+use_description = ""
+
+[resource]
+script = ExtResource("2_tiftm")
+name = "Gem"
+description = "A red apple, looks juicy!"
+texture = ExtResource("4_5ewx2")
+effects = Array[ExtResource("1_snmgt")]([SubResource("Resource_11svw")])
+sell_value = 6

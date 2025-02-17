@@ -1,0 +1,92 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0h6g8j2jx8pe"]
+
+[ext_resource type="Script" path="res://GUI/MainMenu/Scripts/settings_menu.gd" id="1_k3m4p"]
+
+[node name="SettingsMenu" type="Panel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -80.0
+offset_right = 90.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k3m4p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Volume Settings"
+horizontal_alignment = 1
+
+[node name="MasterVolume" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/MasterVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Master"
+
+[node name="MasterSlider" type="HSlider" parent="VBoxContainer/MasterVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="MusicVolume" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/MusicVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="VBoxContainer/MusicVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="SFXVolume" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/SFXVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SFX"
+
+[node name="SFXSlider" type="HSlider" parent="VBoxContainer/SFXVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 37)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Back"

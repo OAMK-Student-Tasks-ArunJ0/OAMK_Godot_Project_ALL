@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=7 format=3 uid="uid://b4inupoclw672"]
+
+[ext_resource type="Script" path="res://Interactable/Items/Scripts/item_effect.gd" id="1_j8nb5"]
+[ext_resource type="AudioStream" uid="uid://b4qbbt576amsq" path="res://Interactable/Items/Sounds/hp-up.wav" id="2_0j2k3"]
+[ext_resource type="Script" path="res://Interactable/Items/Scripts/item_effect_heal_upgrade.gd" id="4_k602i"]
+[ext_resource type="Script" path="res://Interactable/Items/Scripts/item_data.gd" id="4_xvgbg"]
+[ext_resource type="Texture2D" uid="uid://drsj3m6jqbq8h" path="res://Interactable/Items/Sprites/UndeadPackSprites/HumanHeart.png" id="5_m7e5p"]
+
+[sub_resource type="Resource" id="Resource_lrnf6"]
+script = ExtResource("4_k602i")
+hp_upgrade_amount = 2
+audio = ExtResource("2_0j2k3")
+use_description = ""
+
+[resource]
+script = ExtResource("4_xvgbg")
+name = "Health Upgrade"
+description = "Upgrades health of the player"
+texture = ExtResource("5_m7e5p")
+effects = Array[ExtResource("1_j8nb5")]([SubResource("Resource_lrnf6")])
+sell_value = 40

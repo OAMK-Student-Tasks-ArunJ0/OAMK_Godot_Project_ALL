@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dq6pl3mb4r2ji"]
+
+[ext_resource type="Script" path="res://Interactable/Arena/Scripts/item_dropper.gd" id="1_gpj36"]
+[ext_resource type="Texture2D" uid="uid://1hhjhw2wgfil" path="res://Interactable/Items/Sprites/UndeadPackSprites/Poison.png" id="2_b5om1"]
+[ext_resource type="Script" path="res://GeneralNodes/Scripts/persistent_data_handler.gd" id="2_gl12y"]
+[ext_resource type="AudioStream" uid="uid://c2xh2b5ubb2d0" path="res://Interactable/Arena/Sounds/dungeon_discovery.wav" id="2_qtas1"]
+
+[node name="ItemDropper" type="Node2D"]
+script = ExtResource("1_gpj36")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_b5om1")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -43.75
+offset_top = -66.25
+offset_right = 43.25
+offset_bottom = -17.25
+theme_override_constants/outline_size = 6
+text = "ITEM DROP
+v"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_qtas1")
+bus = &"SFX"
+
+[node name="PersistentDataHandler" type="Node" parent="."]
+script = ExtResource("2_gl12y")

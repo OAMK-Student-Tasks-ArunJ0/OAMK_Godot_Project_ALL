@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg4iqo01q26vo"]
+
+[ext_resource type="Script" path="res://Characters/Enemies/Scripts/General/enemy_attack_range.gd" id="1_to6x8"]
+
+
+[node name="EnemyAttackRange" type="Area2D"]
+script = ExtResource("1_to6x8")

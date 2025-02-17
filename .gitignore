@@ -1,0 +1,15 @@
+# Godot 4+ specific ignores
+Godot_Arena_Game/.godot/
+
+# Godot-specific ignores
+Godot_Arena_Game/.import/
+Godot_Arena_Game/export.cfg
+Godot_Arena_Game/export_presets.cfg
+
+# Imported translations (automatically generated from CSV files)
+Godot_Arena_Game/*.translation
+
+# Mono-specific ignores
+Godot_Arena_Game/.mono/
+Godot_Arena_Game/data_*/
+Godot_Arena_Game/mono_crash.*.json
