@@ -29,6 +29,47 @@ func add_item( item : ItemData, count : int = 1 ) -> bool:
 	print( "inventory was full!" )
 	return false
 
+func remove_item(item: ItemData, count: int = 1) -> bool:
+	for s in slots:
+		if s and s.item_data == item:
+			# If the slot has enough quantity, remove the specified amount
+			if s.quantity >= count:
+				s.quantity -= count
+				# If the quantity drops to 0, clear the slot
+				if s.quantity <= 0:
+					s.changed.disconnect(slot_changed)
+					var index = slots.find(s)
+					slots[index] = null
+				emit_changed()
+				return true
+			else:
+				# If the slot doesn't have enough quantity, return false
+				print("Not enough quantity to remove!")
+				return false
+	
+	# If the item isn't found in the inventory
+	print("Item not found in inventory!")
+	return false
+
+func get_item_quantity(item: ItemData) -> int:
+	var total_quantity : int = 0
+	
+	for s in slots:
+		if s and s.item_data == item:
+			total_quantity += s.quantity
+	
+	return total_quantity 
+
+func get_inventory_number(item: ItemData) -> int:
+	var inventory_number : int = 0
+	
+	for s in slots:
+		if s and s.item_data == item:
+			return inventory_number
+		else:
+			inventory_number += 1
+	
+	return 0
 
 func connect_slots() -> void:
 	for s in slots:

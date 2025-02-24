@@ -18,9 +18,9 @@ var new_game_save : Dictionary= {
 		max_hp = 12,
 		pos_x = 0,
 		pos_y = 0,
-		player_cash = 150,
 		sword_damage = 2,
-		ranged_damage = 1
+		ranged_damage = 1,
+		ranged_weapon = ""
 	},
 	items = [],
 	persistence = [],
@@ -93,9 +93,10 @@ func load_game() -> void:
 	
 	PlayerManager.set_player_position( Vector2( current_save.player.pos_x, current_save.player.pos_y ) )
 	PlayerManager.set_health( current_save.player.hp, current_save.player.max_hp )
-	PlayerManager.set_money( current_save.player.player_cash )
+	PlayerManager.set_player_accessories( current_save.player.ranged_weapon )
 	PlayerManager.set_damage( current_save.player.sword_damage, current_save.player.ranged_damage )
 	PlayerManager.INVENTORY_DATA.parse_save_data( current_save.items )
+	
 	
 	await LevelManager.level_loaded
 	
@@ -134,9 +135,9 @@ func update_player_data() -> void:
 	current_save.player.max_hp = p.max_hp
 	current_save.player.pos_x = p.global_position.x
 	current_save.player.pos_y = p.global_position.y
-	current_save.player.player_cash = p.player_cash
 	current_save.player.sword_damage = p.sword_damage
 	current_save.player.ranged_damage = p.ranged_damage
+	current_save.player.ranged_weapon = p.ranged_weapon
 	
 
 

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="InventoryData" load_steps=11 format=3 uid="uid://beuqi0gykfv45"]
+[gd_resource type="Resource" script_class="InventoryData" load_steps=17 format=3 uid="uid://beuqi0gykfv45"]
 
 [ext_resource type="Script" path="res://GUI/Inventory/Scripts/inventory_data.gd" id="1_arfvf"]
 [ext_resource type="Script" path="res://GUI/Inventory/Scripts/slot_data.gd" id="2_4wm0i"]
@@ -6,6 +6,9 @@
 [ext_resource type="Resource" uid="uid://dvkprq4er1cgn" path="res://Interactable/Items/Resources/apple.tres" id="4_l2mn3"]
 [ext_resource type="Resource" uid="uid://b4inupoclw672" path="res://Interactable/Items/Resources/health_upgrade.tres" id="5_qgmpe"]
 [ext_resource type="Resource" uid="uid://cwkqtsqp7xqlg" path="res://Interactable/Items/Resources/damage_upgrade.tres" id="6_aw1wh"]
+[ext_resource type="Resource" uid="uid://dokfju3u422yq" path="res://Interactable/Items/Resources/knife_weapon.tres" id="7_sqvav"]
+[ext_resource type="Resource" uid="uid://bnp8aj4ikkffq" path="res://Interactable/Items/Resources/shuriken_weapon.tres" id="8_gykni"]
+[ext_resource type="Resource" uid="uid://bnufw61wvn5wn" path="res://Interactable/Items/Resources/bomb_weapon.tres" id="9_qskj4"]
 
 [sub_resource type="Resource" id="Resource_y6si2"]
 script = ExtResource("2_4wm0i")
@@ -27,6 +30,21 @@ script = ExtResource("2_4wm0i")
 item_data = ExtResource("6_aw1wh")
 quantity = 1
 
+[sub_resource type="Resource" id="Resource_qgwf3"]
+script = ExtResource("2_4wm0i")
+item_data = ExtResource("7_sqvav")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_acaaj"]
+script = ExtResource("2_4wm0i")
+item_data = ExtResource("8_gykni")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_m6vse"]
+script = ExtResource("2_4wm0i")
+item_data = ExtResource("9_qskj4")
+quantity = 1
+
 [resource]
 script = ExtResource("1_arfvf")
-slots = Array[ExtResource("2_4wm0i")]([SubResource("Resource_y6si2"), SubResource("Resource_yurjo"), SubResource("Resource_vfdfi"), SubResource("Resource_jqx5q"), null, null, null, null, null, null, null, null])
+slots = Array[ExtResource("2_4wm0i")]([SubResource("Resource_y6si2"), SubResource("Resource_yurjo"), SubResource("Resource_vfdfi"), SubResource("Resource_jqx5q"), SubResource("Resource_qgwf3"), SubResource("Resource_acaaj"), SubResource("Resource_m6vse"), null, null, null, null, null])

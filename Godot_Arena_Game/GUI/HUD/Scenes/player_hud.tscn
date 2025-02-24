@@ -165,3 +165,13 @@ offset_right = 330.0
 offset_bottom = 260.0
 theme_override_font_sizes/font_size = 11
 horizontal_alignment = 2
+
+[node name="Cooldown_Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 2.0
+offset_right = 334.0
+offset_bottom = 18.0
+theme_override_font_sizes/font_size = 11
+text = "Ranged CD : 5"
+horizontal_alignment = 1

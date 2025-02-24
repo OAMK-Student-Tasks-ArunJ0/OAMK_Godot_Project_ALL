@@ -2,7 +2,7 @@
 class_name ItemDropper extends Node
 
 
-const PICKUP = preload("res://Items/Scenes/item_node.tscn")
+const PICKUP = preload("res://Interactable/Items/Scenes/item_node.tscn")
 
 @export var item_data : ItemData : set = _set_item_data
 

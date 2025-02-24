@@ -1838,8 +1838,8 @@ scale = Vector2(0.8125, 1)
 texture = ExtResource("4_e41d8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -8)
 texture = ExtResource("4_m0o15")
+offset = Vector2(0, -8)
 hframes = 4
 vframes = 4
 

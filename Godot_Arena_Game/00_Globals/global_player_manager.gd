@@ -23,8 +23,8 @@ func set_health(hp: int, max_hp: int) -> void:
 	player.hp = hp
 	player.update_hp(0)
 
-func set_money(player_cash: int) -> void:
-	player.player_cash = player_cash
+func set_player_accessories( ranged_weapon : String ) -> void:
+	player.ranged_weapon = ranged_weapon
 
 func set_damage(sword_damage: int, ranged_damage: int) -> void:
 	player.sword_damage = sword_damage

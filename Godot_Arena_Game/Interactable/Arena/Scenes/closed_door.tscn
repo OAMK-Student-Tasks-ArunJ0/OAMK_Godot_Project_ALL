@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://54iwpsyhdgr1" path="res://Interactable/Arena/Sounds/bars_open.wav" id="3_bmqit"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_anj27"]
-size = Vector2(32, 48)
+size = Vector2(32, 45)
 
 [sub_resource type="Animation" id="Animation_qr1gy"]
 length = 0.001
@@ -200,7 +200,7 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 light_mask = 0
 visibility_layer = 16
-position = Vector2(16, -24)
+position = Vector2(16, -25.5)
 shape = SubResource("RectangleShape2D_anj27")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

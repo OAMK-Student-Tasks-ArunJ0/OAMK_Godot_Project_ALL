@@ -8,6 +8,7 @@ extends CanvasLayer
 @onready var button_close: Button = $Control/Button_close
 
 var current_merchant: MerchantData
+var money_item : ItemData = preload("res://Interactable/Items/Resources/gem.tres")
 
 func _ready() -> void:
 	hide()
@@ -46,7 +47,7 @@ func hide_merchant_menu() -> void:
 	clear_description()
 
 func update_points_display() -> void:
-	points_label.text = str(PlayerManager.player.player_cash)
+	points_label.text = str(PlayerManager.INVENTORY_DATA.get_item_quantity( money_item ))
 
 func setup_merchant_inventory() -> void:
 	var merchant_slots = merchant_inventory.get_node("GridContainer").get_children()
@@ -84,7 +85,7 @@ func _on_merchant_slot_focused(slot_data: SlotData) -> void:
 func _on_player_slot_focused(slot_data: SlotData) -> void:
 	if slot_data and slot_data.item_data:
 		var item = slot_data.item_data
-		var sell_price = int(item.sell_value * current_merchant.sell_value_multiplier)
+		var sell_price = max(int(item.sell_value * current_merchant.sell_value_multiplier), 1)
 		item_description.text = "%s\nSell Price: %d gold" % [item.description, sell_price]
 	else:
 		clear_description()
@@ -92,42 +93,47 @@ func _on_player_slot_focused(slot_data: SlotData) -> void:
 func _on_merchant_slot_pressed(slot_data: SlotData) -> void:
 	if not slot_data or not slot_data.item_data:
 		return
-		
+	
 	var item = slot_data.item_data
 	var buy_price = item.sell_value
 	
-	if PlayerManager.player.player_cash >= buy_price:
+	var inv_num : int = current_merchant.inventory.get_inventory_number( item )
+	
+	if PlayerManager.INVENTORY_DATA.get_item_quantity( money_item ) >= buy_price:
 		if PlayerManager.INVENTORY_DATA.add_item( item, 1 ):
-			PlayerManager.player.player_cash -= buy_price
+			PlayerManager.INVENTORY_DATA.remove_item( money_item, buy_price )
 			update_points_display()
 			audio_player.play()
 			setup_player_inventory()
+	
+	refocus_slot( merchant_inventory, inv_num  )
 
 func _on_player_slot_pressed(slot_data: SlotData) -> void:
 	if not slot_data or not slot_data.item_data:
 		return
 		
 	var item = slot_data.item_data
-	var sell_price = int(item.sell_value * current_merchant.sell_value_multiplier)
+	var sell_price : int = max(int(item.sell_value * current_merchant.sell_value_multiplier), 1)
 	
-	PlayerManager.player.player_cash += sell_price
+	var inv_num : int = PlayerManager.INVENTORY_DATA.get_inventory_number( item )
+	
+	PlayerManager.INVENTORY_DATA.add_item( money_item, sell_price )
 	slot_data.quantity -= 1
 	
-	var needs_refocus = slot_data.quantity <= 0
-	
-	if needs_refocus:
-		slot_data = null
 		
 	update_points_display()
 	audio_player.play()
 	setup_player_inventory()
 	
 	# Only refocus if we completely sold out of an item
-	if needs_refocus:
-		await get_tree().process_frame
-		var first_slot = player_inventory.get_node("GridContainer").get_child(0)
-		if first_slot:
-			first_slot.grab_focus()
+	refocus_slot( player_inventory, inv_num )
+
+func refocus_slot( inventory : Control, inv_num : int ) -> void:
+	await get_tree().process_frame
+	var first_slot = inventory.get_node("GridContainer").get_child(inv_num)
+	if first_slot:
+		first_slot.grab_focus()
+		
 
 func _on_close_pressed() -> void:
 	hide_merchant_menu()

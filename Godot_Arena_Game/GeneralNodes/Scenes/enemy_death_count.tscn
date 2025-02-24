@@ -3,4 +3,5 @@
 [ext_resource type="Script" path="res://GeneralNodes/Scripts/enemy_death_count.gd" id="1_iqogl"]
 
 [node name="EnemyDeathCount" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_iqogl")

@@ -1,4 +1,4 @@
-Arena Combat RPG
+Arena Combat RPG 
 Kehityssuunnitelma 
 
 Osa 1: Perusmekaniikat 

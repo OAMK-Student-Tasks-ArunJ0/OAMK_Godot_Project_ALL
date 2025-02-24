@@ -22,13 +22,13 @@ tile_map_data = PackedByteArray("AAAAAAAAAAADAAQAAAAAAAEAAAADAAUAAAAAAAIAAAADAAU
 position = Vector2(365, 390)
 
 [node name="LevelTransition1" parent="." instance=ExtResource("6_vy7uj")]
-position = Vector2(544, 435)
+position = Vector2(543, 442)
 level = "res://Levels/Maps/Area01/01_Dungeon.tscn"
 target_transition_area = "LevelTransition2"
 side = 3
 
 [node name="LevelTransition5" parent="." instance=ExtResource("6_vy7uj")]
-position = Vector2(96, 435)
+position = Vector2(96, 442)
 level = "res://Levels/Maps/Area01/05_Dungeon.tscn"
 target_transition_area = "LevelTransition2"
 side = 3

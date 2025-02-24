@@ -14,9 +14,10 @@ var invulnerable : bool = false
 var hp : int = 12
 var max_hp : int = 12
 var health_timer : float = 0.0
-var player_cash : int = 150
 var sword_damage : int = 2
 var ranged_damage : int = 1
+
+@export var ranged_weapon : String = ""
 
 @export var health_regen_time : float = 5.0
 

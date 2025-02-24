@@ -10,4 +10,4 @@ name = "Gem"
 description = "A valuable gem"
 texture = ExtResource("3_kcccc")
 effects = Array[ExtResource("1_x50q3")]([])
-sell_value = 4
+sell_value = 1
