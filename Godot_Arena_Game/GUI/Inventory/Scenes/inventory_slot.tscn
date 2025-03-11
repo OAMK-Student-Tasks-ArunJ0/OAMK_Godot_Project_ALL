@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cnqhjvj4ntb7x"]
 
-[ext_resource type="Script" path="res://GUI/Inventory/Scripts/inventory_slot_ui.gd" id="1_mtipa"]
+[ext_resource type="Script" uid="uid://b52ojk23c5oev" path="res://GUI/Inventory/Scripts/inventory_slot_ui.gd" id="1_mtipa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lu85i"]
 region = Rect2(32, 0, 32, 32)

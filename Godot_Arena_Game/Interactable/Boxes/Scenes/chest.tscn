@@ -1,15 +1,12 @@
 [gd_scene load_steps=15 format=3 uid="uid://cr2ceuupt6g47"]
 
-[ext_resource type="Script" path="res://Interactable/Boxes/Scripts/chest.gd" id="1_r6afn"]
+[ext_resource type="Script" uid="uid://dm1isnpo5k1tr" path="res://Interactable/Boxes/Scripts/chest.gd" id="1_r6afn"]
+[ext_resource type="Resource" uid="uid://dq7fu33cltktp" path="res://Interactable/Items/Resources/gem.tres" id="2_jnseg"]
 [ext_resource type="Texture2D" uid="uid://cxc77agl001an" path="res://Interactable/Boxes/Sprites/Treasure Chests (Toony).png" id="2_v3own"]
 [ext_resource type="Texture2D" uid="uid://w5ttmyoqtn0e" path="res://Interactable/Items/Sprites/UndeadPackSprites/Ruby.png" id="3_3yxhf"]
 [ext_resource type="Texture2D" uid="uid://dxda6pdclrpa" path="res://Characters/Player/Sprites/Shadow.png" id="4_kgs4u"]
 [ext_resource type="AudioStream" uid="uid://dkrlgohs4yto0" path="res://Interactable/Boxes/Sounds/treasure-open.wav" id="5_4bstl"]
 [ext_resource type="PackedScene" uid="uid://dsg4sckw6ep5n" path="res://GeneralNodes/Scenes/persistent_data_handler.tscn" id="6_tlx7k"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jq6im"]
-atlas = ExtResource("3_3yxhf")
-region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="Animation" id="Animation_lv1cj"]
 length = 0.001
@@ -187,10 +184,10 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x3sou"]
 _data = {
-"RESET": SubResource("Animation_lv1cj"),
-"closed": SubResource("Animation_m3uqn"),
-"open_chest": SubResource("Animation_ajre0"),
-"opened": SubResource("Animation_vi1ki")
+&"RESET": SubResource("Animation_lv1cj"),
+&"closed": SubResource("Animation_m3uqn"),
+&"open_chest": SubResource("Animation_ajre0"),
+&"opened": SubResource("Animation_vi1ki")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3lige"]
@@ -202,6 +199,8 @@ size = Vector2(30, 20)
 [node name="Chest" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_r6afn")
+item_data = ExtResource("2_jnseg")
+quantity = 10
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -6)
@@ -213,7 +212,7 @@ vframes = 8
 z_index = 1
 position = Vector2(0, -10)
 scale = Vector2(0.7, 0.7)
-texture = SubResource("AtlasTexture_jq6im")
+texture = ExtResource("3_3yxhf")
 
 [node name="ItemBackgroundShadow" type="Sprite2D" parent="ItemSprite"]
 modulate = Color(1, 1, 1, 0.196078)
@@ -231,11 +230,12 @@ scale = Vector2(1.9, 1.9)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 10
+text = "x10"
 vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_x3sou")
+&"": SubResource("AnimationLibrary_x3sou")
 }
 autoplay = "closed"
 
@@ -243,7 +243,6 @@ autoplay = "closed"
 bus = &"SFX"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-visible = false
 collision_layer = 16
 collision_mask = 0
 
@@ -252,7 +251,6 @@ position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_3lige")
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 collision_layer = 0
 collision_mask = 4
 monitorable = false

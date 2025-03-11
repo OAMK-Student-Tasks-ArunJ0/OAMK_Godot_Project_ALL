@@ -1,34 +1,29 @@
+# enemy_state.gd
+# Base class for enemy states.
+# Specific enemy behaviors (idle, attack, chase, etc.) should extend this class and override the methods.
+
 class_name EnemyState extends Node
 
+# References to the enemy and its state machine.
+var enemy: Enemy
+var state_machine: EnemyStateMachine
 
-## Stores a reference to the enemy that this state belongs to
-var enemy : Enemy
-var state_machine : EnemyStateMachine
-
-
-# What happens when we initialize this state?
+# Called once to initialize the state.
 func init() -> void:
 	pass
 
-
-# what happens when enemy enters this state
+# Called when the enemy enters this state.
 func enter() -> void:
 	pass
 
-
-# what happens when enemy exits state
+# Called when the enemy exits this state.
 func exit() -> void:
 	pass
 
-
-###
-
-
-## What happens when during the _process update in this state 
-func process( _delta: float ) -> EnemyState:
+# Called every frame; return a new state to transition, or null to remain.
+func process(_delta: float) -> EnemyState:
 	return null
 
-
-## What happens during the _physics_process update in this state
-func physics( _delta: float ) -> EnemyState:
+# Called during physics updates; return a new state if needed.
+func physics(_delta: float) -> EnemyState:
 	return null

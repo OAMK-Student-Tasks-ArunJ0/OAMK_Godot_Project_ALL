@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://lwnihhhopygi"]
 
-[ext_resource type="Script" path="res://GeneralNodes/Scripts/enemy_death_count.gd" id="1_iqogl"]
+[ext_resource type="Script" uid="uid://c0ak4kbdx1r45" path="res://GeneralNodes/Scripts/enemy_death_count.gd" id="1_iqogl"]
 
 [node name="EnemyDeathCount" type="Node2D"]
 y_sort_enabled = true

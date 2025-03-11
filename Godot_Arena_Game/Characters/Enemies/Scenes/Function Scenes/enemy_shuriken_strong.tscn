@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=3 uid="uid://dxiv76sev1qp8"]
+
+[ext_resource type="Script" uid="uid://xmiq7fgfqxxm" path="res://Characters/Enemies/Scripts/Assets/enemy_shuriken.gd" id="1_64l6s"]
+[ext_resource type="Texture2D" uid="uid://cp27xxjc6fyy2" path="res://Characters/Player/Sprites/Shuriken.png" id="2_1v06v"]
+[ext_resource type="PackedScene" uid="uid://de7wd545xo76f" path="res://GeneralNodes/Scenes/hurt_box.tscn" id="3_13okn"]
+[ext_resource type="AudioStream" uid="uid://c5pk15mabvyu4" path="res://Characters/Player/Sounds/Shuriken_Sounds/shuriken.wav" id="4_bsls6"]
+
+[sub_resource type="Animation" id="Animation_7fxhh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_r82qj"]
+resource_name = "shuriken"
+length = 0.3
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0375, 0.075, 0.1125, 0.15, 0.1875, 0.225, 0.2625),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g8571"]
+_data = {
+&"RESET": SubResource("Animation_7fxhh"),
+&"shuriken": SubResource("Animation_r82qj")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bbq1h"]
+radius = 16.0
+
+[node name="EnemyShurikenStrong" type="Node2D"]
+z_index = 2
+script = ExtResource("1_64l6s")
+stop_at_hitboxes = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.666667, 0.666667, 1)
+position = Vector2(0, -16)
+texture = ExtResource("2_1v06v")
+hframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_g8571")
+}
+autoplay = "shuriken"
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -16)
+shape = SubResource("CircleShape2D_bbq1h")
+debug_color = Color(0, 0, 1, 0.431373)
+
+[node name="HurtBox" parent="." instance=ExtResource("3_13okn")]
+visible = false
+damage = 4
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0, -16)
+shape = SubResource("CircleShape2D_bbq1h")
+debug_color = Color(1, 0.0113043, 0.0227245, 0.42)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, -16)
+stream = ExtResource("4_bsls6")
+autoplay = true
+bus = &"SFX"

@@ -1,22 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbllu7mbpwfh3"]
+[gd_scene load_steps=4 format=3 uid="uid://cbllu7mbpwfh3"]
 
-[ext_resource type="Script" path="res://Interactable/Merchant/Scripts/merchant_ui.gd" id="1_yptee"]
-[ext_resource type="Texture2D" uid="uid://w8k1jsfihrc2" path="res://GUI/Inventory/Sprites/Inventory.png" id="2_rdd7u"]
+[ext_resource type="Script" uid="uid://bw6jwrwe1usqp" path="res://Interactable/Merchant/Scripts/merchant_ui.gd" id="1_yptee"]
 [ext_resource type="PackedScene" uid="uid://crih7f1bqkxbl" path="res://Interactable/Merchant/Scenes/merchant_slot.tscn" id="3_5ikai"]
 [ext_resource type="AudioStream" uid="uid://5q6n7v6un66c" path="res://Characters/Player/Sounds/Shuriken_Sounds/catch.wav" id="4_ihn3x"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d7jfd"]
-atlas = ExtResource("2_rdd7u")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xowyh"]
-texture = SubResource("AtlasTexture_d7jfd")
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
-
 [node name="MerchantUI" type="CanvasLayer"]
 process_mode = 3
+layer = 3
 script = ExtResource("1_yptee")
 
 [node name="Control" type="Control" parent="."]
@@ -32,184 +22,256 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 2.0
-offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.15, 0.15, 0.15, 0.705882)
-
-[node name="ShopLabel" type="Label" parent="Control"]
-modulate = Color(1, 1, 1, 0.666667)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 85.0
-offset_top = -97.0
-offset_right = 161.0
-offset_bottom = -74.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.75, 0.75)
-text = "Shop Inventory
-"
+color = Color(0.05, 0.05, 0.05, 0.9)
 
 [node name="PointsContainer" type="HBoxContainer" parent="Control"]
 layout_mode = 0
-offset_left = 108.0
-offset_top = 1.0
-offset_right = 224.0
-offset_bottom = 41.0
+offset_left = 112.0
+offset_right = 228.0
+offset_bottom = 40.0
 
 [node name="Points" type="Label" parent="Control/PointsContainer"]
-modulate = Color(1, 1, 1, 0.666667)
+modulate = Color(0.2, 0.8, 0.7, 1)
 layout_mode = 2
-text = "(point amount)
-"
+text = "(point amount)"
+horizontal_alignment = 1
+
+[node name="ShopLabel" type="Label" parent="Control"]
+modulate = Color(0.2, 0.8, 0.7, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 72.0
+offset_top = 10.0
+offset_right = 190.0
+offset_bottom = 33.0
+grow_horizontal = 2
+scale = Vector2(0.75, 0.75)
+text = "Shop Inventory"
+horizontal_alignment = 2
 
 [node name="PlayerLabel" type="Label" parent="Control"]
-modulate = Color(1, 1, 1, 0.666667)
+modulate = Color(0.2, 0.8, 0.7, 1)
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -163.0
-offset_top = -95.0
-offset_right = -36.0
-offset_bottom = -72.0
+offset_left = -160.0
+offset_top = 10.0
+offset_right = -33.0
+offset_bottom = 33.0
 grow_horizontal = 2
-grow_vertical = 2
 scale = Vector2(0.75, 0.75)
 text = "Player Inventory"
 
 [node name="ItemDescription" type="Label" parent="Control"]
-modulate = Color(1, 1, 1, 0.666667)
+modulate = Color(0.2, 0.8, 0.7, 1)
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -170.0
-offset_top = 70.0
-offset_right = -12.0
-offset_bottom = 95.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -50.0
+offset_right = 30.0
+offset_bottom = -10.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 theme_override_font_sizes/font_size = 8
-text = "Red liquid that restores your health!"
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="PlayerInventory" type="PanelContainer" parent="Control"]
 layout_mode = 0
-offset_left = 8.0
+offset_left = 10.0
 offset_top = 56.0
-offset_right = 155.0
-offset_bottom = 180.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_xowyh")
+offset_right = 157.0
+offset_bottom = 200.0
 
-[node name="GridContainer" type="GridContainer" parent="Control/PlayerInventory"]
+[node name="BorderRect" type="ColorRect" parent="Control/PlayerInventory"]
+layout_mode = 2
+color = Color(0.2, 0.8, 0.7, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/PlayerInventory"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="BackgroundRect" type="ColorRect" parent="Control/PlayerInventory/MarginContainer"]
+layout_mode = 2
+color = Color(0.05, 0.05, 0.05, 1)
+
+[node name="GridContainer" type="GridContainer" parent="Control/PlayerInventory/MarginContainer"]
 layout_mode = 2
 columns = 4
 
-[node name="MerchantSlot" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot" parent="Control/PlayerInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot2" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot2" parent="Control/PlayerInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot3" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot3" parent="Control/PlayerInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot4" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot4" parent="Control/PlayerInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot5" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot5" parent="Control/PlayerInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot6" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot6" parent="Control/PlayerInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot7" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot7" parent="Control/PlayerInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot8" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot8" parent="Control/PlayerInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot9" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot9" parent="Control/PlayerInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot10" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot10" parent="Control/PlayerInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot11" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot11" parent="Control/PlayerInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot12" parent="Control/PlayerInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot12" parent="Control/PlayerInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot13" parent="Control/PlayerInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot14" parent="Control/PlayerInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot15" parent="Control/PlayerInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot16" parent="Control/PlayerInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
 [node name="MerchantInventory" type="PanelContainer" parent="Control"]
 clip_contents = true
 layout_mode = 0
-offset_left = 171.0
+offset_left = 183.0
 offset_top = 56.0
-offset_right = 318.0
-offset_bottom = 180.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_xowyh")
+offset_right = 330.0
+offset_bottom = 200.0
 
-[node name="GridContainer" type="GridContainer" parent="Control/MerchantInventory"]
+[node name="BorderRect" type="ColorRect" parent="Control/MerchantInventory"]
+layout_mode = 2
+color = Color(0.2, 0.8, 0.7, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MerchantInventory"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="BackgroundRect" type="ColorRect" parent="Control/MerchantInventory/MarginContainer"]
+layout_mode = 2
+color = Color(0.05, 0.05, 0.05, 1)
+
+[node name="GridContainer" type="GridContainer" parent="Control/MerchantInventory/MarginContainer"]
 layout_mode = 2
 columns = 4
 
-[node name="MerchantSlot" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot" parent="Control/MerchantInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot2" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot2" parent="Control/MerchantInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot3" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot3" parent="Control/MerchantInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot4" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot4" parent="Control/MerchantInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot5" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot5" parent="Control/MerchantInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot6" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot6" parent="Control/MerchantInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot7" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot7" parent="Control/MerchantInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot8" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot8" parent="Control/MerchantInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot9" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot9" parent="Control/MerchantInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot10" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot10" parent="Control/MerchantInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot11" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot11" parent="Control/MerchantInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
-[node name="MerchantSlot12" parent="Control/MerchantInventory/GridContainer" instance=ExtResource("3_5ikai")]
+[node name="MerchantSlot12" parent="Control/MerchantInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot13" parent="Control/MerchantInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot14" parent="Control/MerchantInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot15" parent="Control/MerchantInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
+layout_mode = 2
+
+[node name="MerchantSlot16" parent="Control/MerchantInventory/MarginContainer/GridContainer" instance=ExtResource("3_5ikai")]
 layout_mode = 2
 
 [node name="Button_close" type="Button" parent="Control"]
-custom_minimum_size = Vector2(70, 35)
+custom_minimum_size = Vector2(120, 35)
 layout_mode = 2
-offset_left = 218.0
-offset_top = 189.0
-offset_right = 288.0
-offset_bottom = 224.0
+offset_left = 210.0
+offset_top = 215.0
+offset_right = 330.0
+offset_bottom = 250.0
+theme_override_colors/font_hover_color = Color(0.3, 1, 0.85, 1)
+theme_override_colors/font_color = Color(0.2, 0.8, 0.7, 1)
+theme_override_colors/font_pressed_color = Color(0.15, 0.6, 0.5, 1)
+theme_override_constants/outline_size = 0
 text = "Close Shop"
+
+[node name="ButtonBorder" type="ColorRect" parent="Control/Button_close"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.2, 0.8, 0.7, 1)
+
+[node name="ButtonBackground" type="ColorRect" parent="Control/Button_close"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.05, 0.05, 0.05, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("4_ihn3x")

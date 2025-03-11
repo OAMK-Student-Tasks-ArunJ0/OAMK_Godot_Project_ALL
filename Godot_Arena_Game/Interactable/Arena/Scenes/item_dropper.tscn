@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dq6pl3mb4r2ji"]
 
-[ext_resource type="Script" path="res://Interactable/Arena/Scripts/item_dropper.gd" id="1_gpj36"]
+[ext_resource type="Script" uid="uid://bq8ln1vuv2nyi" path="res://Interactable/Arena/Scripts/item_dropper.gd" id="1_gpj36"]
 [ext_resource type="Texture2D" uid="uid://1hhjhw2wgfil" path="res://Interactable/Items/Sprites/UndeadPackSprites/Poison.png" id="2_b5om1"]
-[ext_resource type="Script" path="res://GeneralNodes/Scripts/persistent_data_handler.gd" id="2_gl12y"]
+[ext_resource type="Script" uid="uid://bdcnqrikd4lw2" path="res://GeneralNodes/Scripts/persistent_data_handler.gd" id="2_gl12y"]
 [ext_resource type="AudioStream" uid="uid://c2xh2b5ubb2d0" path="res://Interactable/Arena/Sounds/dungeon_discovery.wav" id="2_qtas1"]
 
 [node name="ItemDropper" type="Node2D"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://ciugsioqbovfc"]
 
-[ext_resource type="Script" path="res://Characters/Player/Scripts/abilities/shuriken.gd" id="1_so80l"]
+[ext_resource type="Script" uid="uid://bsss66dcgj8fk" path="res://Characters/Player/Scripts/abilities/shuriken.gd" id="1_so80l"]
 [ext_resource type="Texture2D" uid="uid://cp27xxjc6fyy2" path="res://Characters/Player/Sprites/Shuriken.png" id="2_gb72h"]
 [ext_resource type="AudioStream" uid="uid://5q6n7v6un66c" path="res://Characters/Player/Sounds/Shuriken_Sounds/catch.wav" id="2_sii7u"]
 [ext_resource type="PackedScene" uid="uid://de7wd545xo76f" path="res://GeneralNodes/Scenes/hurt_box.tscn" id="3_wtwtj"]
@@ -44,13 +44,13 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g8571"]
 _data = {
-"RESET": SubResource("Animation_7fxhh"),
-"shuriken": SubResource("Animation_r82qj")
+&"RESET": SubResource("Animation_7fxhh"),
+&"shuriken": SubResource("Animation_r82qj")
 }
 
 [node name="Shuriken" type="Node2D"]
 z_index = 2
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.7, 0.7)
 script = ExtResource("1_so80l")
 catch_audio = ExtResource("2_sii7u")
 
@@ -60,6 +60,8 @@ texture = ExtResource("2_gb72h")
 hframes = 8
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 0
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -68,7 +70,7 @@ shape = SubResource("CircleShape2D_6415x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_g8571")
+&"": SubResource("AnimationLibrary_g8571")
 }
 autoplay = "shuriken"
 

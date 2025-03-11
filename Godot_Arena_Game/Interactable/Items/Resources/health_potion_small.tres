@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=6 format=3 uid="uid://dvkprq4er1cgn"]
+
+[ext_resource type="Script" uid="uid://bcejuef48smxt" path="res://Interactable/Items/Scripts/item_effect.gd" id="1_okhnx"]
+[ext_resource type="Script" uid="uid://x2fl4uqovm8l" path="res://Interactable/Items/Scripts/item_effect_heal.gd" id="2_3nmqf"]
+[ext_resource type="Script" uid="uid://dtcifi2whwlae" path="res://Interactable/Items/Scripts/item_data.gd" id="3_7okmi"]
+[ext_resource type="Texture2D" uid="uid://cie5ud2q3sn78" path="res://Interactable/Items/Sprites/IconPack/Icon12.png" id="4_fqmye"]
+
+[sub_resource type="Resource" id="Resource_11svw"]
+script = ExtResource("2_3nmqf")
+heal_amount = 2
+use_description = ""
+
+[resource]
+script = ExtResource("3_7okmi")
+name = "Small Health Potion"
+description = "Small health potion!"
+texture = ExtResource("4_fqmye")
+effects = Array[ExtResource("1_okhnx")]([SubResource("Resource_11svw")])
+sell_value = 6

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=7 format=3 uid="uid://bnufw61wvn5wn"]
 
-[ext_resource type="Script" path="res://Interactable/Items/Scripts/item_effect.gd" id="1_vvdyf"]
+[ext_resource type="Script" uid="uid://bcejuef48smxt" path="res://Interactable/Items/Scripts/item_effect.gd" id="1_vvdyf"]
 [ext_resource type="AudioStream" uid="uid://cue55hkr834cd" path="res://Characters/Enemies/Sounds/hit_00.wav" id="2_hves1"]
-[ext_resource type="Script" path="res://Interactable/Items/Scripts/item_effect_change_weapon.gd" id="3_c1sqh"]
-[ext_resource type="Script" path="res://Interactable/Items/Scripts/item_data.gd" id="4_fcoe1"]
+[ext_resource type="Script" uid="uid://dy6w2u8n586jw" path="res://Interactable/Items/Scripts/item_effect_change_weapon.gd" id="3_c1sqh"]
+[ext_resource type="Script" uid="uid://dtcifi2whwlae" path="res://Interactable/Items/Scripts/item_data.gd" id="4_fcoe1"]
 [ext_resource type="Texture2D" uid="uid://bdwsp372l1axj" path="res://Interactable/Items/Sprites/IconPack/Icon46.png" id="5_1r5ln"]
 
 [sub_resource type="Resource" id="Resource_rlb4g"]
@@ -14,7 +14,7 @@ use_description = ""
 
 [resource]
 script = ExtResource("4_fcoe1")
-name = "Bomb"
+name = "Weapon Change : Bomb"
 description = "Changes ranged weapon to Bomb"
 texture = ExtResource("5_1r5ln")
 effects = Array[ExtResource("1_vvdyf")]([SubResource("Resource_rlb4g")])

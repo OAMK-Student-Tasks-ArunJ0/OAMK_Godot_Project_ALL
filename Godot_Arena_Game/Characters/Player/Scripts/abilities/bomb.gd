@@ -1,15 +1,18 @@
+# bomb.gd
+# Represents a bomb projectile that travels and then explodes after reaching a target distance or upon collision.
+# The explosion animation triggers destruction of the bomb node.
+
 class_name Bomb extends Node2D
 
 enum State { INACTIVE, THROW }
 
-var player : Player
-var direction : Vector2
-var speed : float = 0
+var player: Player
+var direction: Vector2
+var speed: float = 0
 var state
 
-@export var max_speed : float = 300
-@export var max_distance_from_player : float = 300  # Maximum distance before the knife is deleted
-
+@export var max_speed: float = 300
+@export var max_distance_from_player: float = 300  # Maximum allowed distance.
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var hurt_box: HurtBox = $HurtBox
 @onready var bomb_hurt_box: HurtBox = $HurtBox
@@ -24,17 +27,17 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if state == State.THROW:
 		position += direction * speed * delta
-
-		# Check distance from player
+		# Check if the bomb is too far or has collided.
 		var distance_from_player = global_position.distance_to(player.global_position)
 		if distance_from_player > max_distance_from_player or hurt_box.has_hit:
 			speed = 0
 			animation_player.play("explode")
 
 func throw(throw_direction: Vector2) -> void:
+	# Initialize bomb damage.
 	hurt_box.init_damage(1)
 	bomb_hurt_box.init_damage(player.ranged_damage)
-	hurt_box.has_hit = false  # Reset has_hit manually
+	hurt_box.has_hit = false
 	direction = throw_direction
 	speed = max_speed
 	state = State.THROW

@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://cjellrn2htcya"]
 
-[ext_resource type="Script" path="res://Characters/Player/Scripts/abilities/bomb.gd" id="1_svctj"]
+[ext_resource type="Script" uid="uid://cg2a080nf6sa2" path="res://Characters/Player/Scripts/abilities/bomb.gd" id="1_svctj"]
 [ext_resource type="Texture2D" uid="uid://p673xg6kfxgp" path="res://Characters/Enemies/Sprites/DestroySmoke.png" id="2_ta4lg"]
 [ext_resource type="Texture2D" uid="uid://dxda6pdclrpa" path="res://Characters/Player/Sprites/Shadow.png" id="2_xlyhj"]
 [ext_resource type="PackedScene" uid="uid://de7wd545xo76f" path="res://GeneralNodes/Scenes/hurt_box.tscn" id="3_3mise"]
@@ -330,9 +330,9 @@ tracks/8/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g8571"]
 _data = {
-"RESET": SubResource("Animation_7fxhh"),
-"bomb": SubResource("Animation_gmjqo"),
-"explode": SubResource("Animation_up3mb")
+&"RESET": SubResource("Animation_7fxhh"),
+&"bomb": SubResource("Animation_gmjqo"),
+&"explode": SubResource("Animation_up3mb")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k7rcx"]
@@ -343,7 +343,6 @@ radius = 34.0
 
 [node name="Bomb" type="Node2D"]
 z_index = 2
-scale = Vector2(0.5, 0.5)
 script = ExtResource("1_svctj")
 
 [node name="ExplosionSprite2D" type="Sprite2D" parent="."]
@@ -375,7 +374,7 @@ shape = SubResource("CircleShape2D_6415x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_g8571")
+&"": SubResource("AnimationLibrary_g8571")
 }
 autoplay = "bomb"
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://d2eyp78gtbxdl"]
 
-[ext_resource type="Script" path="res://Characters/Player/Scripts/abilities/knife.gd" id="1_74fyq"]
+[ext_resource type="Script" uid="uid://b6og7lvc7ruyd" path="res://Characters/Player/Scripts/abilities/knife.gd" id="1_74fyq"]
 [ext_resource type="Texture2D" uid="uid://cjp86f81txunk" path="res://Characters/Player/Sprites/Knife.png" id="2_k7xh6"]
 [ext_resource type="PackedScene" uid="uid://de7wd545xo76f" path="res://GeneralNodes/Scenes/hurt_box.tscn" id="4_xe4lm"]
 [ext_resource type="AudioStream" uid="uid://c5pk15mabvyu4" path="res://Characters/Player/Sounds/Shuriken_Sounds/shuriken.wav" id="5_gffpf"]
@@ -385,15 +385,15 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_g8571"]
 _data = {
-"RESET": SubResource("Animation_7fxhh"),
-"knife_east": SubResource("Animation_pnqqm"),
-"knife_north": SubResource("Animation_nyxq3"),
-"knife_north_east": SubResource("Animation_bkn3e"),
-"knife_north_west": SubResource("Animation_480xl"),
-"knife_south": SubResource("Animation_702rf"),
-"knife_south_east": SubResource("Animation_noojx"),
-"knife_south_west": SubResource("Animation_weh57"),
-"knife_west": SubResource("Animation_jkd2o")
+&"RESET": SubResource("Animation_7fxhh"),
+&"knife_east": SubResource("Animation_pnqqm"),
+&"knife_north": SubResource("Animation_nyxq3"),
+&"knife_north_east": SubResource("Animation_bkn3e"),
+&"knife_north_west": SubResource("Animation_480xl"),
+&"knife_south": SubResource("Animation_702rf"),
+&"knife_south_east": SubResource("Animation_noojx"),
+&"knife_south_west": SubResource("Animation_weh57"),
+&"knife_west": SubResource("Animation_jkd2o")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m8pnb"]

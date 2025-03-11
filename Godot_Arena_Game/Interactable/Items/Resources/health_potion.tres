@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=7 format=3 uid="uid://c07po0r2yi0pi"]
+
+[ext_resource type="Script" uid="uid://bcejuef48smxt" path="res://Interactable/Items/Scripts/item_effect.gd" id="1_cixh3"]
+[ext_resource type="AudioStream" uid="uid://b4qbbt576amsq" path="res://Interactable/Items/Sounds/hp-up.wav" id="2_6buif"]
+[ext_resource type="Script" uid="uid://x2fl4uqovm8l" path="res://Interactable/Items/Scripts/item_effect_heal.gd" id="3_u6dle"]
+[ext_resource type="Script" uid="uid://dtcifi2whwlae" path="res://Interactable/Items/Scripts/item_data.gd" id="4_a78xa"]
+[ext_resource type="Texture2D" uid="uid://cqng16suot13v" path="res://Interactable/Items/Sprites/IconPack/Icon24.png" id="5_rwghs"]
+
+[sub_resource type="Resource" id="Resource_vwiih"]
+script = ExtResource("3_u6dle")
+heal_amount = 4
+audio = ExtResource("2_6buif")
+use_description = ""
+
+[resource]
+script = ExtResource("4_a78xa")
+name = "Health Potion"
+description = "Red liquid that restores your health!"
+texture = ExtResource("5_rwghs")
+effects = Array[ExtResource("1_cixh3")]([SubResource("Resource_vwiih")])
+sell_value = 10

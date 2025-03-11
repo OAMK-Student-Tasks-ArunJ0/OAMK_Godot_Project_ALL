@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://eo7nk8k3gjr0"]
 
 [ext_resource type="Texture2D" uid="uid://clvomqke8p2ol" path="res://Interactable/Boxes/Sprites/SmallProps.png" id="1_buc3q"]
-[ext_resource type="Script" path="res://Interactable/Boxes/Scripts/prop_script.gd" id="1_oi2nj"]
+[ext_resource type="Script" uid="uid://df1igc4oalpy" path="res://Interactable/Boxes/Scripts/prop_script.gd" id="1_oi2nj"]
 [ext_resource type="PackedScene" uid="uid://yrctujrhd6ig" path="res://GeneralNodes/Scenes/hit_box.tscn" id="2_gm4p8"]
 [ext_resource type="Texture2D" uid="uid://p673xg6kfxgp" path="res://Characters/Enemies/Sprites/DestroySmoke.png" id="4_lgcjw"]
 [ext_resource type="AudioStream" uid="uid://dqrjuei8mtsu4" path="res://Characters/Enemies/Sounds/hit_01.wav" id="4_ljk4r"]
@@ -88,7 +88,7 @@ tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "clips": [{
-"end_offset": 0.0,
+"end_offset": 0.0656667,
 "start_offset": 0.0,
 "stream": ExtResource("4_ljk4r")
 }],
@@ -182,7 +182,7 @@ tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "clips": [{
-"end_offset": 0.0,
+"end_offset": 0.0656667,
 "start_offset": 0.0,
 "stream": ExtResource("4_ljk4r")
 }],
@@ -265,7 +265,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "clips": [{
-"end_offset": 0.563362,
+"end_offset": 0.455667,
 "start_offset": 0.0,
 "stream": ExtResource("4_ljk4r")
 }],
@@ -324,12 +324,12 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q84r6"]
 _data = {
-"RESET": SubResource("Animation_swqmb"),
-"prop_1": SubResource("Animation_232pm"),
-"prop_1_idle": SubResource("Animation_rwf6k"),
-"prop_2": SubResource("Animation_ohlkl"),
-"prop_2_idle": SubResource("Animation_bjtkh"),
-"prop_destroyed": SubResource("Animation_x8dtt")
+&"RESET": SubResource("Animation_swqmb"),
+&"prop_1": SubResource("Animation_232pm"),
+&"prop_1_idle": SubResource("Animation_rwf6k"),
+&"prop_2": SubResource("Animation_ohlkl"),
+&"prop_2_idle": SubResource("Animation_bjtkh"),
+&"prop_destroyed": SubResource("Animation_x8dtt")
 }
 
 [sub_resource type="Animation" id="Animation_unyp6"]
@@ -390,8 +390,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0c0ls"]
 _data = {
-"RESET": SubResource("Animation_unyp6"),
-"destroy": SubResource("Animation_qp414")
+&"RESET": SubResource("Animation_unyp6"),
+&"destroy": SubResource("Animation_qp414")
 }
 
 [node name="Barrel" type="Node2D"]
@@ -406,6 +406,7 @@ frame = 1
 
 [node name="HitBox" parent="." instance=ExtResource("2_gm4p8")]
 position = Vector2(0, -6)
+collision_layer = 258
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(0, 1)
@@ -424,7 +425,7 @@ shape = SubResource("CapsuleShape2D_hftg8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_q84r6")
+&"": SubResource("AnimationLibrary_q84r6")
 }
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
@@ -441,7 +442,7 @@ hframes = 6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DestroyEffectSprite"]
 libraries = {
-"": SubResource("AnimationLibrary_0c0ls")
+&"": SubResource("AnimationLibrary_0c0ls")
 }
 
 [node name="InvulnerabilityTimer" type="Timer" parent="."]

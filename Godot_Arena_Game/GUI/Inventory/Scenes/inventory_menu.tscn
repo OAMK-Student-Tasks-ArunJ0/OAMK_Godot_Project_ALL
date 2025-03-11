@@ -1,21 +1,72 @@
-[gd_scene load_steps=9 format=3 uid="uid://0e38g6xj2v6k"]
+[gd_scene load_steps=11 format=3 uid="uid://0e38g6xj2v6k"]
 
-[ext_resource type="Script" path="res://GUI/Inventory/Scripts/inventory_menu.gd" id="1_rrgn0"]
-[ext_resource type="Texture2D" uid="uid://w8k1jsfihrc2" path="res://GUI/Inventory/Sprites/Inventory.png" id="2_gv8le"]
-[ext_resource type="Script" path="res://GUI/Inventory/Scripts/inventory_ui.gd" id="3_smnko"]
+[ext_resource type="Script" uid="uid://bfx4psmf2bcyh" path="res://GUI/Inventory/Scripts/inventory_menu.gd" id="1_rrgn0"]
+[ext_resource type="Script" uid="uid://cijxfp22ytalo" path="res://GUI/Inventory/Scripts/inventory_ui.gd" id="3_smnko"]
 [ext_resource type="Resource" uid="uid://b25qya1bbhds3" path="res://GUI/Inventory/Resources/player_inventory.tres" id="4_i8agc"]
 [ext_resource type="PackedScene" uid="uid://cnqhjvj4ntb7x" path="res://GUI/Inventory/Scenes/inventory_slot.tscn" id="5_10li3"]
 [ext_resource type="PackedScene" uid="uid://d0h6g8j2jx8pe" path="res://GUI/MainMenu/Scenes/settings_menu.tscn" id="6_settings"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d7jfd"]
-atlas = ExtResource("2_gv8le")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_inventory_panel"]
+bg_color = Color(0.07, 0.07, 0.07, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 0.7, 0.6, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xowyh"]
-texture = SubResource("AtlasTexture_d7jfd")
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_focus"]
+bg_color = Color(0.15, 0.15, 0.15, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3, 0.85, 0.75, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_hover"]
+bg_color = Color(0.15, 0.15, 0.15, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.8, 0.7, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_pressed"]
+bg_color = Color(0.07, 0.07, 0.07, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.4, 0.9, 0.8, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_normal"]
+bg_color = Color(0.12, 0.12, 0.12, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2, 0.7, 0.6, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
 [node name="InventoryMenu" type="CanvasLayer"]
 process_mode = 3
@@ -37,10 +88,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.15, 0.15, 0.15, 0.705882)
+color = Color(0.05, 0.05, 0.05, 0.9)
 
 [node name="ItemDescription" type="Label" parent="Control"]
-modulate = Color(1, 1, 1, 0.666667)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -48,28 +98,38 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -160.0
-offset_top = 59.0
-offset_right = -2.0
-offset_bottom = 84.0
+offset_top = 60.0
+offset_right = 160.0
+offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 8
-text = "Red liquid that restores your health!"
+theme_override_colors/font_color = Color(0.2, 0.7, 0.6, 0.8)
+theme_override_font_sizes/font_size = 10
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="Control"]
 custom_minimum_size = Vector2(160, 124)
-layout_mode = 0
-offset_left = 8.0
-offset_top = 59.0
-offset_right = 168.0
-offset_bottom = 183.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_xowyh")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -110.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_inventory_panel")
 
 [node name="GridContainer" type="GridContainer" parent="Control/PanelContainer"]
 custom_minimum_size = Vector2(140, 104)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
 columns = 4
 script = ExtResource("3_smnko")
 data = ExtResource("4_i8agc")
@@ -110,40 +170,79 @@ layout_mode = 2
 [node name="InventorySlot12" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_10li3")]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+[node name="InventorySlot13" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_10li3")]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_10li3")]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_10li3")]
+layout_mode = 2
+
+[node name="InventorySlot16" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_10li3")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="VBoxContainer" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -160.5
-offset_top = -112.0
-offset_right = 148.5
-offset_bottom = -77.0
+offset_left = 20.0
+offset_top = -110.0
+offset_right = 160.0
+offset_bottom = 52.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.75, 0.75)
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="Button_Save" type="Button" parent="Control/HBoxContainer"]
-custom_minimum_size = Vector2(70, 35)
-layout_mode = 2
-text = "Save"
+theme_override_constants/separation = 2
 
 [node name="Button_Load" type="Button" parent="Control/HBoxContainer"]
-custom_minimum_size = Vector2(70, 35)
+custom_minimum_size = Vector2(140, 30)
 layout_mode = 2
-text = "Load"
+theme_override_colors/font_hover_color = Color(0.3, 0.9, 0.8, 1)
+theme_override_colors/font_color = Color(0.2, 0.7, 0.6, 1)
+theme_override_colors/font_focus_color = Color(0.3, 0.9, 0.8, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_button_focus")
+theme_override_styles/hover = SubResource("StyleBoxFlat_button_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_button_pressed")
+theme_override_styles/normal = SubResource("StyleBoxFlat_button_normal")
+text = "Load Last Room"
 
 [node name="Button_Settings" type="Button" parent="Control/HBoxContainer"]
-custom_minimum_size = Vector2(70, 35)
+custom_minimum_size = Vector2(140, 30)
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.3, 0.9, 0.8, 1)
+theme_override_colors/font_color = Color(0.2, 0.7, 0.6, 1)
+theme_override_colors/font_focus_color = Color(0.3, 0.9, 0.8, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_button_focus")
+theme_override_styles/hover = SubResource("StyleBoxFlat_button_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_button_pressed")
+theme_override_styles/normal = SubResource("StyleBoxFlat_button_normal")
 text = "Settings"
 
-[node name="Button_Exit" type="Button" parent="Control/HBoxContainer"]
+[node name="Button_Main_Menu" type="Button" parent="Control/HBoxContainer"]
+custom_minimum_size = Vector2(140, 30)
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.3, 0.9, 0.8, 1)
+theme_override_colors/font_color = Color(0.2, 0.7, 0.6, 1)
+theme_override_colors/font_focus_color = Color(0.3, 0.9, 0.8, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_button_focus")
+theme_override_styles/hover = SubResource("StyleBoxFlat_button_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_button_pressed")
+theme_override_styles/normal = SubResource("StyleBoxFlat_button_normal")
+text = "Main Menu"
+
+[node name="Button_Exit" type="Button" parent="Control/HBoxContainer"]
+custom_minimum_size = Vector2(140, 30)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.3, 0.9, 0.8, 1)
+theme_override_colors/font_color = Color(0.2, 0.7, 0.6, 1)
+theme_override_colors/font_focus_color = Color(0.3, 0.9, 0.8, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_button_focus")
+theme_override_styles/hover = SubResource("StyleBoxFlat_button_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_button_pressed")
+theme_override_styles/normal = SubResource("StyleBoxFlat_button_normal")
 text = "Exit Game"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
@@ -153,3 +252,7 @@ bus = &"SFX"
 [node name="SettingsMenu" parent="Control" instance=ExtResource("6_settings")]
 visible = false
 layout_mode = 1
+offset_left = -110.0
+offset_top = -110.0
+offset_right = 110.0
+offset_bottom = 110.0

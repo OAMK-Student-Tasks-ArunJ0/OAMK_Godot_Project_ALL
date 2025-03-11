@@ -1,7 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b557cy6cip13k"]
 
-[ext_resource type="Script" path="res://Characters/Enemies/Scripts/General/vision_range.gd" id="1_6h5p2"]
-
+[ext_resource type="Script" uid="uid://bdvd8qy17jwoq" path="res://Characters/Enemies/Scripts/Assets/vision_range.gd" id="1_6h5p2"]
 
 [node name="VisionRange" type="Area2D"]
 collision_layer = 0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://crih7f1bqkxbl"]
 
-[ext_resource type="Script" path="res://Interactable/Merchant/Scripts/merchant_slot_ui.gd" id="1_p731h"]
+[ext_resource type="Script" uid="uid://lcx3xqy6jh68" path="res://Interactable/Merchant/Scripts/merchant_slot_ui.gd" id="1_p731h"]
 [ext_resource type="Texture2D" uid="uid://dw5o1y7c5f45y" path="res://Interactable/Items/Sprites/UndeadPackSprites/KnifeIcon.png" id="2_vhyhw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lu85i"]

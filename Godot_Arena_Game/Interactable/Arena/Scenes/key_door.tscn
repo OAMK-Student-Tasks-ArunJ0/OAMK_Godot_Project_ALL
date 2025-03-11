@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://bgwnni38np83r"]
 
-[ext_resource type="Script" path="res://Interactable/Arena/Scripts/key_door.gd" id="1_oi845"]
-[ext_resource type="Texture2D" uid="uid://3j4cafqcaasg" path="res://Levels/Sprites/Dungeon Prison/Assets/Doors.png" id="2_74fk6"]
+[ext_resource type="Script" uid="uid://bstqho3ni7jdb" path="res://Interactable/Arena/Scripts/key_door.gd" id="1_oi845"]
+[ext_resource type="Texture2D" uid="uid://3j4cafqcaasg" path="res://Levels/Sprites/Dungeon Prison/Assets/DungeonDoors.png" id="2_74fk6"]
 [ext_resource type="Resource" uid="uid://y6ouymn7bw81" path="res://Interactable/Items/Resources/key_arena.tres" id="2_ovyfg"]
 [ext_resource type="AudioStream" uid="uid://gvtxfq1h3ngc" path="res://Interactable/Arena/Sounds/locked_door.wav" id="2_pabew"]
 [ext_resource type="AudioStream" uid="uid://hf86g0ie6v2a" path="res://Interactable/Arena/Sounds/unlock_door.wav" id="3_d1uxy"]
-[ext_resource type="Script" path="res://GeneralNodes/Scripts/persistent_data_handler.gd" id="3_pr80s"]
+[ext_resource type="Script" uid="uid://bdcnqrikd4lw2" path="res://GeneralNodes/Scripts/persistent_data_handler.gd" id="3_pr80s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_anj27"]
 size = Vector2(32, 45)
@@ -149,11 +149,11 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2wlhw"]
 _data = {
-"RESET": SubResource("Animation_qr1gy"),
-"close_door": SubResource("Animation_rdauo"),
-"closed": SubResource("Animation_narlb"),
-"open": SubResource("Animation_wh80r"),
-"open_door": SubResource("Animation_gnk44")
+&"RESET": SubResource("Animation_qr1gy"),
+&"close_door": SubResource("Animation_rdauo"),
+&"closed": SubResource("Animation_narlb"),
+&"open": SubResource("Animation_wh80r"),
+&"open_door": SubResource("Animation_gnk44")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abh27"]

@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=7 format=3 uid="uid://dokfju3u422yq"]
 
-[ext_resource type="Script" path="res://Interactable/Items/Scripts/item_effect.gd" id="1_jspo8"]
+[ext_resource type="Script" uid="uid://bcejuef48smxt" path="res://Interactable/Items/Scripts/item_effect.gd" id="1_jspo8"]
 [ext_resource type="AudioStream" uid="uid://cib3hsf4w3ujd" path="res://Characters/Player/Sounds/Sword_Sounds/07_human_atk_sword_1.wav" id="2_i188f"]
-[ext_resource type="Script" path="res://Interactable/Items/Scripts/item_effect_change_weapon.gd" id="3_fh2gi"]
-[ext_resource type="Script" path="res://Interactable/Items/Scripts/item_data.gd" id="4_47rug"]
-[ext_resource type="Texture2D" uid="uid://cjp86f81txunk" path="res://Characters/Player/Sprites/Knife.png" id="5_a2eg1"]
+[ext_resource type="Script" uid="uid://dy6w2u8n586jw" path="res://Interactable/Items/Scripts/item_effect_change_weapon.gd" id="3_fh2gi"]
+[ext_resource type="Script" uid="uid://dtcifi2whwlae" path="res://Interactable/Items/Scripts/item_data.gd" id="4_47rug"]
+[ext_resource type="Texture2D" uid="uid://dw5o1y7c5f45y" path="res://Interactable/Items/Sprites/UndeadPackSprites/KnifeIcon.png" id="5_0be7n"]
 
 [sub_resource type="Resource" id="Resource_rlb4g"]
 script = ExtResource("3_fh2gi")
@@ -14,8 +14,8 @@ use_description = ""
 
 [resource]
 script = ExtResource("4_47rug")
-name = "Knife"
+name = "Weapon Change : Knife"
 description = "Changes ranged weapon to Knife"
-texture = ExtResource("5_a2eg1")
+texture = ExtResource("5_0be7n")
 effects = Array[ExtResource("1_jspo8")]([SubResource("Resource_rlb4g")])
 sell_value = 50

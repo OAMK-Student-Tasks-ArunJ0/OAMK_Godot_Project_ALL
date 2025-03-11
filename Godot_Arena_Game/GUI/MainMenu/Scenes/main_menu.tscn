@@ -1,12 +1,59 @@
-[gd_scene load_steps=3 format=3 uid="uid://bh3xm5u5iasgp"]
+[gd_scene load_steps=7 format=3 uid="uid://bh3xm5u5iasgp"]
 
-[ext_resource type="Script" path="res://GUI/MainMenu/Scripts/main_menu.gd" id="1_m2u4p"]
+[ext_resource type="Script" uid="uid://beubmcqek8e7u" path="res://GUI/MainMenu/Scripts/main_menu.gd" id="1_m2u4p"]
 [ext_resource type="PackedScene" uid="uid://d0h6g8j2jx8pe" path="res://GUI/MainMenu/Scenes/settings_menu.tscn" id="2_settings"]
+[ext_resource type="PackedScene" uid="uid://dpg7s1eykr6wa" path="res://GUI/MainMenu/Scenes/save_slot_menu.tscn" id="3_f0km4"]
+[ext_resource type="PackedScene" uid="uid://bojarqg117ck6" path="res://GUI/MainMenu/Scenes/tutorial.tscn" id="4_qovw3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rn2kl"]
+bg_color = Color(0.156863, 0.141176, 0.176471, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.156863, 0.623529, 0.584314, 0.501961)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_color = Color(0, 0, 0, 0.211765)
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygdsp"]
+bg_color = Color(0.121569, 0.141176, 0.160784, 0.901961)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.156863, 0.623529, 0.584314, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.290196)
+shadow_size = 4
 
 [node name="MainMenu" type="CanvasLayer"]
 process_mode = 3
 layer = 4
 script = ExtResource("1_m2u4p")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="DarkenOverlay" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0509804, 0.0627451, 0.0784314, 1)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -16,49 +63,149 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
-layout_mode = 0
-offset_right = 340.0
-offset_bottom = 260.0
-color = Color(0.392157, 0.392157, 0.392157, 1)
+[node name="GameTitle" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -170.0
+offset_top = 10.0
+offset_right = 170.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.156863, 0.623529, 0.584314, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.513726)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 28
+text = "2D Arena RPG"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="MainPanel" type="VBoxContainer" parent="Control"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 90.0
-offset_top = 50.0
-offset_right = -90.0
-offset_bottom = -50.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 107.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 10
 alignment = 1
 
 [node name="ContinueButton" type="Button" parent="Control/MainPanel"]
-custom_minimum_size = Vector2(0, 37)
+custom_minimum_size = Vector2(0, 38)
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.156863, 0.623529, 0.584314, 1)
+theme_override_colors/font_color = Color(0.803922, 0.901961, 0.901961, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 16
+theme_override_styles/hover = SubResource("StyleBoxFlat_rn2kl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rn2kl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ygdsp")
 text = "Continue"
 
 [node name="NewGameButton" type="Button" parent="Control/MainPanel"]
-custom_minimum_size = Vector2(0, 37)
+custom_minimum_size = Vector2(0, 38)
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.156863, 0.623529, 0.584314, 1)
+theme_override_colors/font_color = Color(0.803922, 0.901961, 0.901961, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/hover = SubResource("StyleBoxFlat_rn2kl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rn2kl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ygdsp")
 text = "New Game"
 
 [node name="SettingsButton" type="Button" parent="Control/MainPanel"]
-custom_minimum_size = Vector2(0, 37)
+custom_minimum_size = Vector2(0, 38)
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.156863, 0.623529, 0.584314, 1)
+theme_override_colors/font_color = Color(0.803922, 0.901961, 0.901961, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/hover = SubResource("StyleBoxFlat_rn2kl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rn2kl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ygdsp")
 text = "Settings"
 
 [node name="ExitButton" type="Button" parent="Control/MainPanel"]
-custom_minimum_size = Vector2(0, 37)
+custom_minimum_size = Vector2(0, 38)
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.156863, 0.623529, 0.584314, 1)
+theme_override_colors/font_color = Color(0.803922, 0.901961, 0.901961, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/hover = SubResource("StyleBoxFlat_rn2kl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rn2kl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ygdsp")
 text = "Exit"
+
+[node name="VersionLabel" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -25.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.529412, 0.529412, 0.529412, 1)
+theme_override_font_sizes/font_size = 10
+text = "v 1.0.0"
+horizontal_alignment = 2
 
 [node name="SettingsMenu" parent="Control" instance=ExtResource("2_settings")]
 visible = false
-layout_mode = 1
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 60.0
+offset_top = 20.0
+offset_right = 280.0
+offset_bottom = 240.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="SaveSlotMenu" parent="Control" instance=ExtResource("3_f0km4")]
+visible = false
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 45.0
+offset_top = 15.0
+offset_right = 295.0
+offset_bottom = 245.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Prologue" parent="Control" instance=ExtResource("4_qovw3")]
+visible = false
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 340.0
+offset_bottom = 260.0
+grow_horizontal = 1
+grow_vertical = 1

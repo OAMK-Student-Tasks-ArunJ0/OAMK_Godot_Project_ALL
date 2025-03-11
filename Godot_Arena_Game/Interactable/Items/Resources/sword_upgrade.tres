@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=7 format=3 uid="uid://cwkqtsqp7xqlg"]
+
+[ext_resource type="Script" uid="uid://bcejuef48smxt" path="res://Interactable/Items/Scripts/item_effect.gd" id="1_ubbkx"]
+[ext_resource type="AudioStream" uid="uid://cib3hsf4w3ujd" path="res://Characters/Player/Sounds/Sword_Sounds/07_human_atk_sword_1.wav" id="2_meeie"]
+[ext_resource type="Script" uid="uid://bhpqy4ao87mgn" path="res://Interactable/Items/Scripts/item_effect_weapon_upgrade.gd" id="3_1ji87"]
+[ext_resource type="Script" uid="uid://dtcifi2whwlae" path="res://Interactable/Items/Scripts/item_data.gd" id="4_ger1c"]
+[ext_resource type="Texture2D" uid="uid://38nlbui4kbod" path="res://Interactable/Items/Sprites/IconPack/Icon39.png" id="5_ubbkx"]
+
+[sub_resource type="Resource" id="Resource_yrpv8"]
+script = ExtResource("3_1ji87")
+melee_damage_upgrade = 1
+melee_range_upgrade = 0.1
+ranged_damage_upgrade = 0
+audio = ExtResource("2_meeie")
+use_description = ""
+
+[resource]
+script = ExtResource("4_ger1c")
+name = "Sword Upgrade"
+description = "Upgrades swords damage and range!"
+texture = ExtResource("5_ubbkx")
+effects = Array[ExtResource("1_ubbkx")]([SubResource("Resource_yrpv8")])
+sell_value = 60
