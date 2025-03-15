@@ -45,25 +45,20 @@ Tämä on 2D top-down RPG -peli, joka on tehty Godot Engineä käyttäen. Projek
    ```bash
    git clone <repository-url>
    tai lataa ZIP-tiedosto ja pura se.
-
-2. **Avaa Godot Editor
-3. **Käynnistä Godot Editor.
-
-4. **Tuo projekti
+2. **Avaa Godot Editor**
+3. **Käynnistä Godot Editor.**
+4. **Tuo projekti**
     Klikkaa Godotin Project Managerissa "Import".
     Selaa kansioon, johon projekti on tallennettu, ja valitse project.godot -tiedosto.
     Klikkaa "Import & Edit" avataksesi projektin.
-
-5. **Muokkaa editorin asetuksia (tarvittaessa)
+5. **Muokkaa editorin asetuksia (tarvittaessa)**
     Varmista, että editorin konfiguraatiot, kuten .vscode/settings.json, ovat kunnossa.
-
-6. **Käynnistä projekti
+6. **Käynnistä projekti**
     Paina F5 tai klikkaa "Play" -painiketta projektin suorittamiseksi.
 
 ## Vinkkejä ja ohjeita
 
-- **Tutustu projektin rakenteeseen:
+- **Tutustu projektin rakenteeseen:**
     Tarkastele Godotin FileSystem-dokkia saadaksesi yleiskuvan kansioiden ja skriptien järjestelystä.
-
-- **Skriptit ja dokumentaatio:
+- **Skriptit ja dokumentaatio:**
     Skripteissä on kattavat kommentit, jotka auttavat ymmärtämään logiikkaa ja toimintaa.
