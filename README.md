@@ -43,7 +43,7 @@ Tämä on 2D top-down RPG -peli, joka on tehty Godot Engineä käyttäen. Projek
 1. **Lataa tai kloona projektin**  
     Voit käyttää Gitä:
       ```bash
-      git clone <repository-url>
+      git clone <repository-url>´´´
     tai lataa ZIP-tiedosto ja pura se.
 2. **Avaa Godot Editor**
 3. **Käynnistä Godot Editor.**
