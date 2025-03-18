@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b5efpp6bfx7fn" path="res://Interactable/Arena/Scenes/body_sensor.tscn" id="8_a1emr"]
 [ext_resource type="PackedScene" uid="uid://c22xcp0qt4nlu" path="res://Interactable/Arena/Scenes/question_mark.tscn" id="9_lklin"]
 [ext_resource type="PackedScene" uid="uid://dby0w2scwx5nf" path="res://Interactable/Arena/Scenes/forest_closed_door.tscn" id="10_d3lcq"]
-[ext_resource type="PackedScene" uid="uid://lwnihhhopygi" path="res://GeneralNodes/Scenes/enemy_death_count.tscn" id="11_0g45a"]
+[ext_resource type="PackedScene" uid="uid://lwnihhhopygi" path="res://Interactable/GeneralNodes/Scenes/enemy_death_count.tscn" id="11_0g45a"]
 [ext_resource type="PackedScene" uid="uid://c1flmq45s3gg0" path="res://Characters/Enemies/Scenes/Enemies/slime.tscn" id="12_urk8d"]
 [ext_resource type="PackedScene" uid="uid://cr2ceuupt6g47" path="res://Interactable/Boxes/Scenes/chest.tscn" id="13_db4yl"]
 [ext_resource type="Resource" uid="uid://c07po0r2yi0pi" path="res://Interactable/Items/Resources/health_potion.tres" id="14_db4yl"]

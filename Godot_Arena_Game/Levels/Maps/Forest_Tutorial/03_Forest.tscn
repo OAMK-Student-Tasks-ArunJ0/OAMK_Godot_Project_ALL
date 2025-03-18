@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://frccix4y7rom" path="res://Levels/Scenes/level_transition.tscn" id="7_hq1vu"]
 [ext_resource type="PackedScene" uid="uid://b5efpp6bfx7fn" path="res://Interactable/Arena/Scenes/body_sensor.tscn" id="8_0nr4a"]
 [ext_resource type="PackedScene" uid="uid://c22xcp0qt4nlu" path="res://Interactable/Arena/Scenes/question_mark.tscn" id="9_ujy1q"]
-[ext_resource type="PackedScene" uid="uid://lwnihhhopygi" path="res://GeneralNodes/Scenes/enemy_death_count.tscn" id="11_p1e0x"]
+[ext_resource type="PackedScene" uid="uid://lwnihhhopygi" path="res://Interactable/GeneralNodes/Scenes/enemy_death_count.tscn" id="11_p1e0x"]
 [ext_resource type="PackedScene" uid="uid://c1flmq45s3gg0" path="res://Characters/Enemies/Scenes/Enemies/slime.tscn" id="12_gj4s8"]
 [ext_resource type="PackedScene" uid="uid://bgwnni38np83r" path="res://Interactable/Arena/Scenes/key_door.tscn" id="12_pe25t"]
 [ext_resource type="PackedScene" uid="uid://dq6pl3mb4r2ji" path="res://Interactable/Arena/Scenes/item_dropper.tscn" id="13_gdyrh"]

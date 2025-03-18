@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bsss66dcgj8fk" path="res://Characters/Player/Scripts/abilities/shuriken.gd" id="1_so80l"]
 [ext_resource type="Texture2D" uid="uid://cp27xxjc6fyy2" path="res://Characters/Player/Sprites/Shuriken.png" id="2_gb72h"]
 [ext_resource type="AudioStream" uid="uid://5q6n7v6un66c" path="res://Characters/Player/Sounds/Shuriken_Sounds/catch.wav" id="2_sii7u"]
-[ext_resource type="PackedScene" uid="uid://de7wd545xo76f" path="res://GeneralNodes/Scenes/hurt_box.tscn" id="3_wtwtj"]
+[ext_resource type="PackedScene" uid="uid://de7wd545xo76f" path="res://Interactable/GeneralNodes/Scenes/hurt_box.tscn" id="3_wtwtj"]
 [ext_resource type="AudioStream" uid="uid://c5pk15mabvyu4" path="res://Characters/Player/Sounds/Shuriken_Sounds/shuriken.wav" id="4_d2smh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6415x"]

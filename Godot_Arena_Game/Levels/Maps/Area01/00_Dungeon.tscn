@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://frccix4y7rom" path="res://Levels/Scenes/level_transition.tscn" id="6_u3h8w"]
 [ext_resource type="PackedScene" uid="uid://eo7nk8k3gjr0" path="res://Interactable/Boxes/Scenes/barrel.tscn" id="7_spjwa"]
 [ext_resource type="PackedScene" uid="uid://c22xcp0qt4nlu" path="res://Interactable/Arena/Scenes/question_mark.tscn" id="9_5eeda"]
-[ext_resource type="PackedScene" uid="uid://cqeoi3sthe4li" path="res://Interactable/Arena/Scenes/RoomSave.tscn" id="10_mmfq4"]
+[ext_resource type="PackedScene" uid="uid://cqeoi3sthe4li" path="res://Interactable/Arena/Scenes/room_save.tscn" id="10_mmfq4"]
 [ext_resource type="PackedScene" uid="uid://0j6o5q5c8yur" path="res://Interactable/Merchant/Scenes/merchant.tscn" id="11_h3rn4"]
 [ext_resource type="AudioStream" uid="uid://c6efo1ssl2s84" path="res://Interactable/Items/Sounds/item_pickup.wav" id="11_w548k"]
 

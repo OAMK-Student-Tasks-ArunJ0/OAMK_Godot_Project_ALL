@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://w5ttmyoqtn0e" path="res://Interactable/Items/Sprites/UndeadPackSprites/Ruby.png" id="3_3yxhf"]
 [ext_resource type="Texture2D" uid="uid://dxda6pdclrpa" path="res://Characters/Player/Sprites/Shadow.png" id="4_kgs4u"]
 [ext_resource type="AudioStream" uid="uid://dkrlgohs4yto0" path="res://Interactable/Boxes/Sounds/treasure-open.wav" id="5_4bstl"]
-[ext_resource type="PackedScene" uid="uid://dsg4sckw6ep5n" path="res://GeneralNodes/Scenes/persistent_data_handler.tscn" id="6_tlx7k"]
+[ext_resource type="PackedScene" uid="uid://dsg4sckw6ep5n" path="res://Interactable/GeneralNodes/Scenes/persistent_data_handler.tscn" id="6_tlx7k"]
 
 [sub_resource type="Animation" id="Animation_lv1cj"]
 length = 0.001

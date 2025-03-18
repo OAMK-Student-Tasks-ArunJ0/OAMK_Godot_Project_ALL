@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://xmiq7fgfqxxm" path="res://Characters/Enemies/Scripts/Assets/enemy_shuriken.gd" id="1_64l6s"]
 [ext_resource type="Texture2D" uid="uid://cp27xxjc6fyy2" path="res://Characters/Player/Sprites/Shuriken.png" id="2_1v06v"]
-[ext_resource type="PackedScene" uid="uid://de7wd545xo76f" path="res://GeneralNodes/Scenes/hurt_box.tscn" id="3_13okn"]
+[ext_resource type="PackedScene" uid="uid://de7wd545xo76f" path="res://Interactable/GeneralNodes/Scenes/hurt_box.tscn" id="3_13okn"]
 [ext_resource type="AudioStream" uid="uid://c5pk15mabvyu4" path="res://Characters/Player/Sounds/Shuriken_Sounds/shuriken.wav" id="4_bsls6"]
 
 [sub_resource type="Animation" id="Animation_7fxhh"]

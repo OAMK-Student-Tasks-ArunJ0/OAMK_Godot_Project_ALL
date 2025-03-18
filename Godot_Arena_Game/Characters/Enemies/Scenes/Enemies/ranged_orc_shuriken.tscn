@@ -1,10 +1,10 @@
 [gd_scene load_steps=57 format=3 uid="uid://cn0phq2058m0h"]
 
 [ext_resource type="Script" uid="uid://dsb803dfkares" path="res://Characters/Enemies/Scripts/General/enemy.gd" id="1_3u5dd"]
-[ext_resource type="PackedScene" uid="uid://yrctujrhd6ig" path="res://GeneralNodes/Scenes/hit_box.tscn" id="2_nxv6u"]
+[ext_resource type="PackedScene" uid="uid://yrctujrhd6ig" path="res://Interactable/GeneralNodes/Scenes/hit_box.tscn" id="2_nxv6u"]
 [ext_resource type="Texture2D" uid="uid://ora0w5kaxocn" path="res://Characters/Enemies/Sprites/ShadowEnemy.png" id="3_8jlym"]
 [ext_resource type="Texture2D" uid="uid://bobdtm1kkhao5" path="res://Characters/Enemies/Sprites/Ranged_Orc/orc2_walk_full.png" id="4_5el5w"]
-[ext_resource type="PackedScene" uid="uid://de7wd545xo76f" path="res://GeneralNodes/Scenes/hurt_box.tscn" id="5_ca2o3"]
+[ext_resource type="PackedScene" uid="uid://de7wd545xo76f" path="res://Interactable/GeneralNodes/Scenes/hurt_box.tscn" id="5_ca2o3"]
 [ext_resource type="Texture2D" uid="uid://vo3ajd8xn2ov" path="res://Characters/Enemies/Sprites/Ranged_Orc/orc2_death_full.png" id="6_xm1nd"]
 [ext_resource type="AudioStream" uid="uid://dqrjuei8mtsu4" path="res://Characters/Enemies/Sounds/hit_01.wav" id="7_3huog"]
 [ext_resource type="AudioStream" uid="uid://cue55hkr834cd" path="res://Characters/Enemies/Sounds/hit_00.wav" id="8_q6cqi"]

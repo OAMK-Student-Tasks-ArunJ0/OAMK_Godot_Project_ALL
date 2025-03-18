@@ -1,7 +1,7 @@
 [gd_scene load_steps=60 format=3 uid="uid://d00v617s1mfy0"]
 
 [ext_resource type="Script" uid="uid://dsb803dfkares" path="res://Characters/Enemies/Scripts/General/enemy.gd" id="1_a0dn5"]
-[ext_resource type="PackedScene" uid="uid://yrctujrhd6ig" path="res://GeneralNodes/Scenes/hit_box.tscn" id="2_ffrwk"]
+[ext_resource type="PackedScene" uid="uid://yrctujrhd6ig" path="res://Interactable/GeneralNodes/Scenes/hit_box.tscn" id="2_ffrwk"]
 [ext_resource type="Texture2D" uid="uid://ora0w5kaxocn" path="res://Characters/Enemies/Sprites/ShadowEnemy.png" id="4_e41d8"]
 [ext_resource type="Texture2D" uid="uid://blqm05eo5vabj" path="res://Characters/Enemies/Sprites/Simple_Orc/orc1_idle_full.png" id="4_m0o15"]
 [ext_resource type="Texture2D" uid="uid://47e2nmmjmf3d" path="res://Characters/Enemies/Sprites/Simple_Orc/orc1_death_full.png" id="5_onklf"]
@@ -19,7 +19,7 @@
 [ext_resource type="Resource" uid="uid://dq7fu33cltktp" path="res://Interactable/Items/Resources/gem.tres" id="13_t2fow"]
 [ext_resource type="Resource" uid="uid://dvkprq4er1cgn" path="res://Interactable/Items/Resources/health_potion_small.tres" id="14_odvw4"]
 [ext_resource type="Texture2D" uid="uid://p673xg6kfxgp" path="res://Characters/Enemies/Sprites/DestroySmoke.png" id="15_6gyrc"]
-[ext_resource type="PackedScene" uid="uid://de7wd545xo76f" path="res://GeneralNodes/Scenes/hurt_box.tscn" id="16_17xl3"]
+[ext_resource type="PackedScene" uid="uid://de7wd545xo76f" path="res://Interactable/GeneralNodes/Scenes/hurt_box.tscn" id="16_17xl3"]
 [ext_resource type="Script" uid="uid://dxwdnso014y68" path="res://Characters/Enemies/Scripts/General/states/enemy_state_charge.gd" id="20_p6njq"]
 [ext_resource type="Script" uid="uid://cbv0kd1swx5vm" path="res://Characters/Enemies/Scripts/General/states/enemy_state_attack.gd" id="21_fb4u1"]
 [ext_resource type="PackedScene" uid="uid://b557cy6cip13k" path="res://Characters/Enemies/Scenes/Function Scenes/vision_range.tscn" id="21_i3plo"]

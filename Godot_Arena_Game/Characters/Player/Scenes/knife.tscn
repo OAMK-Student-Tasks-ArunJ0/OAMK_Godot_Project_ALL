@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b6og7lvc7ruyd" path="res://Characters/Player/Scripts/abilities/knife.gd" id="1_74fyq"]
 [ext_resource type="Texture2D" uid="uid://cjp86f81txunk" path="res://Characters/Player/Sprites/Knife.png" id="2_k7xh6"]
-[ext_resource type="PackedScene" uid="uid://de7wd545xo76f" path="res://GeneralNodes/Scenes/hurt_box.tscn" id="4_xe4lm"]
+[ext_resource type="PackedScene" uid="uid://de7wd545xo76f" path="res://Interactable/GeneralNodes/Scenes/hurt_box.tscn" id="4_xe4lm"]
 [ext_resource type="AudioStream" uid="uid://c5pk15mabvyu4" path="res://Characters/Player/Sounds/Shuriken_Sounds/shuriken.wav" id="5_gffpf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6415x"]

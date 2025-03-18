@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://y6ouymn7bw81" path="res://Interactable/Items/Resources/key_arena.tres" id="2_ovyfg"]
 [ext_resource type="AudioStream" uid="uid://gvtxfq1h3ngc" path="res://Interactable/Arena/Sounds/locked_door.wav" id="2_pabew"]
 [ext_resource type="AudioStream" uid="uid://hf86g0ie6v2a" path="res://Interactable/Arena/Sounds/unlock_door.wav" id="3_d1uxy"]
-[ext_resource type="Script" uid="uid://bdcnqrikd4lw2" path="res://GeneralNodes/Scripts/persistent_data_handler.gd" id="3_pr80s"]
+[ext_resource type="Script" uid="uid://bdcnqrikd4lw2" path="res://Interactable/GeneralNodes/Scripts/persistent_data_handler.gd" id="3_pr80s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_anj27"]
 size = Vector2(32, 45)
@@ -187,7 +187,7 @@ shape = SubResource("RectangleShape2D_anj27")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_2wlhw")
+&"": SubResource("AnimationLibrary_2wlhw")
 }
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

@@ -4,11 +4,11 @@
 [ext_resource type="AudioStream" uid="uid://dyplgdurqxcbg" path="res://Levels/Music/time_for_adventure.mp3" id="2_rntcb"]
 [ext_resource type="PackedScene" uid="uid://ct7t5oyibnfrc" path="res://Levels/Maps/ground.tscn" id="3_cxf2q"]
 [ext_resource type="PackedScene" uid="uid://di614bd08wg4a" path="res://Levels/Maps/walls.tscn" id="4_3ohom"]
-[ext_resource type="PackedScene" uid="uid://yrctujrhd6ig" path="res://GeneralNodes/Scenes/hit_box.tscn" id="5_5tpjm"]
+[ext_resource type="PackedScene" uid="uid://yrctujrhd6ig" path="res://Interactable/GeneralNodes/Scenes/hit_box.tscn" id="5_5tpjm"]
 [ext_resource type="PackedScene" uid="uid://47noqflmyl5f" path="res://Levels/Scenes/player_spawn.tscn" id="5_k2prs"]
 [ext_resource type="PackedScene" uid="uid://frccix4y7rom" path="res://Levels/Scenes/level_transition.tscn" id="6_c1wc8"]
 [ext_resource type="PackedScene" uid="uid://cbcnmye602fng" path="res://Interactable/Arena/Scenes/closed_door.tscn" id="7_hqrhc"]
-[ext_resource type="PackedScene" uid="uid://lwnihhhopygi" path="res://GeneralNodes/Scenes/enemy_death_count.tscn" id="10_sh3o1"]
+[ext_resource type="PackedScene" uid="uid://lwnihhhopygi" path="res://Interactable/GeneralNodes/Scenes/enemy_death_count.tscn" id="10_sh3o1"]
 [ext_resource type="PackedScene" uid="uid://dv1a7v1m3ytjn" path="res://Characters/Enemies/Scenes/Enemies/ranged_orc_shuriken_bossroom.tscn" id="11_5tpjm"]
 [ext_resource type="PackedScene" uid="uid://cxnn46kwcfhb6" path="res://Characters/Enemies/Scenes/Enemies/orc_boss.tscn" id="11_8afim"]
 

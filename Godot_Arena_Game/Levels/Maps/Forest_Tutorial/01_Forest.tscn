@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b5efpp6bfx7fn" path="res://Interactable/Arena/Scenes/body_sensor.tscn" id="8_76y7f"]
 [ext_resource type="PackedScene" uid="uid://c22xcp0qt4nlu" path="res://Interactable/Arena/Scenes/question_mark.tscn" id="9_77vp8"]
 [ext_resource type="PackedScene" uid="uid://b0eao6tg7820" path="res://Characters/Enemies/Scenes/Enemies/bunny.tscn" id="10_ahci2"]
-[ext_resource type="PackedScene" uid="uid://lwnihhhopygi" path="res://GeneralNodes/Scenes/enemy_death_count.tscn" id="11_54kdr"]
+[ext_resource type="PackedScene" uid="uid://lwnihhhopygi" path="res://Interactable/GeneralNodes/Scenes/enemy_death_count.tscn" id="11_54kdr"]
 [ext_resource type="PackedScene" uid="uid://dby0w2scwx5nf" path="res://Interactable/Arena/Scenes/forest_closed_door.tscn" id="11_xp1p5"]
 
 [node name="01_Forest" type="Node2D"]

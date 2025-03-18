@@ -1,8 +1,8 @@
 [gd_scene load_steps=43 format=3 uid="uid://c1flmq45s3gg0"]
 
 [ext_resource type="Script" uid="uid://dsb803dfkares" path="res://Characters/Enemies/Scripts/General/enemy.gd" id="1_aoyxm"]
-[ext_resource type="PackedScene" uid="uid://yrctujrhd6ig" path="res://GeneralNodes/Scenes/hit_box.tscn" id="2_vopie"]
-[ext_resource type="PackedScene" uid="uid://de7wd545xo76f" path="res://GeneralNodes/Scenes/hurt_box.tscn" id="3_gnbxb"]
+[ext_resource type="PackedScene" uid="uid://yrctujrhd6ig" path="res://Interactable/GeneralNodes/Scenes/hit_box.tscn" id="2_vopie"]
+[ext_resource type="PackedScene" uid="uid://de7wd545xo76f" path="res://Interactable/GeneralNodes/Scenes/hurt_box.tscn" id="3_gnbxb"]
 [ext_resource type="Texture2D" uid="uid://ora0w5kaxocn" path="res://Characters/Enemies/Sprites/ShadowEnemy.png" id="4_me8l1"]
 [ext_resource type="Texture2D" uid="uid://bjs6hti2c7uif" path="res://Characters/Enemies/Sprites/Slime/Slimes1.png" id="5_ybgkc"]
 [ext_resource type="Script" uid="uid://dts0hx07x00c6" path="res://Characters/Enemies/Scripts/General/enemy_state_machine.gd" id="6_ja6nd"]
