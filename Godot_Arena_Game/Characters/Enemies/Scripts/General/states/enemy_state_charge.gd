@@ -138,7 +138,7 @@ func _on_player_seen() -> void:
 	_enemy_sees_player = true
 	# If already in a hurt or attack state, do nothing.
 	if (state_machine.current_state is EnemyStateHurt or 
-		state_machine.current_state is EnemyStateDestroy or 
+		state_machine.current_state is EnemyStateDeath or 
 		state_machine.current_state is EnemyStateAttack):
 		return
 	else:

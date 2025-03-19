@@ -14,7 +14,7 @@
 [ext_resource type="Script" uid="uid://dj5h4yutpchqo" path="res://Characters/Enemies/Scripts/General/states/enemy_state_idle_walk.gd" id="9_rdom2"]
 [ext_resource type="Script" uid="uid://c8wpdmv74ch5q" path="res://Characters/Enemies/Scripts/General/states/enemy_state_hurt.gd" id="10_b8a5e"]
 [ext_resource type="Texture2D" uid="uid://bs4ojqsu0siu1" path="res://Characters/Enemies/Sprites/Simple_Orc/orc1_walk_attack_front _full.png" id="10_k0xqf"]
-[ext_resource type="Script" uid="uid://d15i7x5ggdlei" path="res://Characters/Enemies/Scripts/General/states/enemy_state_destroy.gd" id="11_gkr26"]
+[ext_resource type="Script" uid="uid://d15i7x5ggdlei" path="res://Characters/Enemies/Scripts/General/states/enemy_state_death.gd" id="11_gkr26"]
 [ext_resource type="Script" uid="uid://cqggk0hneevip" path="res://Characters/Enemies/Scripts/General/drop_data.gd" id="12_2jwqo"]
 [ext_resource type="Resource" uid="uid://dq7fu33cltktp" path="res://Interactable/Items/Resources/gem.tres" id="13_t2fow"]
 [ext_resource type="Resource" uid="uid://dvkprq4er1cgn" path="res://Interactable/Items/Resources/health_potion_small.tres" id="14_odvw4"]

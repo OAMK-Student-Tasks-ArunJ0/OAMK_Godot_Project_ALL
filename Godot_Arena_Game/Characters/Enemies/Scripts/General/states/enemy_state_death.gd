@@ -3,7 +3,7 @@
 # When triggered (typically when HP is depleted), it plays a death animation,
 # disables collisions, drops items based on defined drop data, and then frees the enemy node.
 
-class_name EnemyStateDestroy extends EnemyState
+class_name EnemyStateDeath extends EnemyState
 
 const PICKUP = preload("res://Interactable/Items/Scenes/item_node.tscn")
 

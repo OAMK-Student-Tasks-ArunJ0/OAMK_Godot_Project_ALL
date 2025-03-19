@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://cxnn46kwcfhb6"]
+[gd_scene load_steps=65 format=3 uid="uid://cxnn46kwcfhb6"]
 
 [ext_resource type="Script" uid="uid://dsb803dfkares" path="res://Characters/Enemies/Scripts/General/enemy.gd" id="1_vjjxe"]
 [ext_resource type="PackedScene" uid="uid://yrctujrhd6ig" path="res://Interactable/GeneralNodes/Scenes/hit_box.tscn" id="2_xsmst"]
@@ -15,8 +15,9 @@
 [ext_resource type="Script" uid="uid://bja3aq8q1jrx3" path="res://Characters/Enemies/Scripts/General/states/enemy_state_idle.gd" id="13_4vapp"]
 [ext_resource type="Script" uid="uid://dj5h4yutpchqo" path="res://Characters/Enemies/Scripts/General/states/enemy_state_idle_walk.gd" id="14_6gmur"]
 [ext_resource type="Script" uid="uid://c8wpdmv74ch5q" path="res://Characters/Enemies/Scripts/General/states/enemy_state_hurt.gd" id="15_m6nsc"]
-[ext_resource type="Script" uid="uid://d15i7x5ggdlei" path="res://Characters/Enemies/Scripts/General/states/enemy_state_destroy.gd" id="16_ijmpo"]
+[ext_resource type="Script" uid="uid://d15i7x5ggdlei" path="res://Characters/Enemies/Scripts/General/states/enemy_state_death.gd" id="16_ijmpo"]
 [ext_resource type="Script" uid="uid://cqggk0hneevip" path="res://Characters/Enemies/Scripts/General/drop_data.gd" id="17_a2a8y"]
+[ext_resource type="Resource" uid="uid://c07po0r2yi0pi" path="res://Interactable/Items/Resources/health_potion.tres" id="18_paskv"]
 [ext_resource type="Resource" uid="uid://dvkprq4er1cgn" path="res://Interactable/Items/Resources/health_potion_small.tres" id="19_2rhey"]
 [ext_resource type="Script" uid="uid://dxwdnso014y68" path="res://Characters/Enemies/Scripts/General/states/enemy_state_charge.gd" id="20_k756p"]
 [ext_resource type="Script" uid="uid://cbv0kd1swx5vm" path="res://Characters/Enemies/Scripts/General/states/enemy_state_attack.gd" id="21_wstj4"]
@@ -1751,7 +1752,7 @@ _data = {
 
 [sub_resource type="Resource" id="Resource_t0tdx"]
 script = ExtResource("17_a2a8y")
-item = ExtResource("19_2rhey")
+item = ExtResource("18_paskv")
 probability = 100.0
 min_amount = 1
 max_amount = 3

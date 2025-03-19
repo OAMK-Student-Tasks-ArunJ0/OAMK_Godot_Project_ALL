@@ -17,12 +17,12 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 
 [autoload]
 
-AudioManager="*res://00_Globals/global_audio_manager.gd"
-LevelManager="*res://00_Globals/global_level_manager.gd"
+AudioManager="*res://Globals/global_audio_manager.gd"
+LevelManager="*res://Globals/global_level_manager.gd"
 PlayerHud="*res://GUI/HUD/Scenes/player_hud.tscn"
-PlayerManager="*res://00_Globals/global_player_manager.gd"
+PlayerManager="*res://Globals/global_player_manager.gd"
 SceneTransition="*res://GUI/SceneTransition/scene_transition.tscn"
-SaveManager="*res://00_Globals/global_save_manager.gd"
+SaveManager="*res://Globals/global_save_manager.gd"
 InventoryMenu="*res://GUI/Inventory/Scenes/inventory_menu.tscn"
 MerchantUI="*res://Interactable/Merchant/Scenes/merchant_ui.tscn"
 

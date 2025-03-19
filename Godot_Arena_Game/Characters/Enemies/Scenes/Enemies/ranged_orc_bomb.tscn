@@ -15,7 +15,7 @@
 [ext_resource type="Script" uid="uid://bja3aq8q1jrx3" path="res://Characters/Enemies/Scripts/General/states/enemy_state_idle.gd" id="13_dellp"]
 [ext_resource type="Script" uid="uid://dj5h4yutpchqo" path="res://Characters/Enemies/Scripts/General/states/enemy_state_idle_walk.gd" id="14_dnmaj"]
 [ext_resource type="Script" uid="uid://c8wpdmv74ch5q" path="res://Characters/Enemies/Scripts/General/states/enemy_state_hurt.gd" id="15_b6xps"]
-[ext_resource type="Script" uid="uid://d15i7x5ggdlei" path="res://Characters/Enemies/Scripts/General/states/enemy_state_destroy.gd" id="16_y4wyu"]
+[ext_resource type="Script" uid="uid://d15i7x5ggdlei" path="res://Characters/Enemies/Scripts/General/states/enemy_state_death.gd" id="16_y4wyu"]
 [ext_resource type="Script" uid="uid://cqggk0hneevip" path="res://Characters/Enemies/Scripts/General/drop_data.gd" id="17_wi8t3"]
 [ext_resource type="Resource" uid="uid://dq7fu33cltktp" path="res://Interactable/Items/Resources/gem.tres" id="18_xuea0"]
 [ext_resource type="Resource" uid="uid://dvkprq4er1cgn" path="res://Interactable/Items/Resources/health_potion_small.tres" id="19_cjoom"]

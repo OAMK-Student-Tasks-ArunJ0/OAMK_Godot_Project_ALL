@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://bja3aq8q1jrx3" path="res://Characters/Enemies/Scripts/General/states/enemy_state_idle.gd" id="7_anqog"]
 [ext_resource type="Script" uid="uid://dj5h4yutpchqo" path="res://Characters/Enemies/Scripts/General/states/enemy_state_idle_walk.gd" id="8_fdco7"]
 [ext_resource type="Script" uid="uid://c8wpdmv74ch5q" path="res://Characters/Enemies/Scripts/General/states/enemy_state_hurt.gd" id="9_dyp32"]
-[ext_resource type="Script" uid="uid://d15i7x5ggdlei" path="res://Characters/Enemies/Scripts/General/states/enemy_state_destroy.gd" id="10_pu2ad"]
+[ext_resource type="Script" uid="uid://d15i7x5ggdlei" path="res://Characters/Enemies/Scripts/General/states/enemy_state_death.gd" id="10_pu2ad"]
 [ext_resource type="Script" uid="uid://cqggk0hneevip" path="res://Characters/Enemies/Scripts/General/drop_data.gd" id="11_4gxmf"]
 [ext_resource type="Resource" uid="uid://dq7fu33cltktp" path="res://Interactable/Items/Resources/gem.tres" id="12_u8qdh"]
 [ext_resource type="Resource" uid="uid://dvkprq4er1cgn" path="res://Interactable/Items/Resources/health_potion_small.tres" id="13_4qlhp"]
@@ -634,6 +634,36 @@ tracks/1/keys = {
 "values": [Vector2(0, -8), Vector2(0, -12), Vector2(0, -8), Vector2(0, -8)]
 }
 
+[sub_resource type="Animation" id="Animation_aoyxm"]
+resource_name = "walk_down"
+length = 0.9
+loop_mode = 2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [6, 7, 8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(2, 2, 2, 2),
+"update": 0,
+"values": [Vector2(0, -8), Vector2(0, -12), Vector2(0, -8), Vector2(0, -8)]
+}
+
 [sub_resource type="Animation" id="Animation_ffb8y"]
 resource_name = "walk_side"
 length = 0.9
@@ -666,36 +696,6 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_8ored"]
 resource_name = "walk_up"
-length = 0.9
-loop_mode = 2
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [6, 7, 8]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:offset")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
-"transitions": PackedFloat32Array(2, 2, 2, 2),
-"update": 0,
-"values": [Vector2(0, -8), Vector2(0, -12), Vector2(0, -8), Vector2(0, -8)]
-}
-
-[sub_resource type="Animation" id="Animation_aoyxm"]
-resource_name = "walk_down"
 length = 0.9
 loop_mode = 2
 step = 0.05

@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://bja3aq8q1jrx3" path="res://Characters/Enemies/Scripts/General/states/enemy_state_idle.gd" id="9_hfbw0"]
 [ext_resource type="Script" uid="uid://dj5h4yutpchqo" path="res://Characters/Enemies/Scripts/General/states/enemy_state_idle_walk.gd" id="10_mbkgq"]
 [ext_resource type="Script" uid="uid://c8wpdmv74ch5q" path="res://Characters/Enemies/Scripts/General/states/enemy_state_hurt.gd" id="11_44no1"]
-[ext_resource type="Script" uid="uid://d15i7x5ggdlei" path="res://Characters/Enemies/Scripts/General/states/enemy_state_destroy.gd" id="12_ripop"]
+[ext_resource type="Script" uid="uid://d15i7x5ggdlei" path="res://Characters/Enemies/Scripts/General/states/enemy_state_death.gd" id="12_ripop"]
 [ext_resource type="Script" uid="uid://cqggk0hneevip" path="res://Characters/Enemies/Scripts/General/drop_data.gd" id="13_mmrno"]
 [ext_resource type="Resource" uid="uid://ds4iudmbhddkh" path="res://Interactable/Items/Resources/bone.tres" id="14_32s23"]
 [ext_resource type="Resource" uid="uid://dvkprq4er1cgn" path="res://Interactable/Items/Resources/health_potion_small.tres" id="15_pobne"]
@@ -1660,7 +1660,6 @@ after_idle_state = NodePath("../Idle Walk")
 
 [node name="Idle Walk" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("next_state")]
 script = ExtResource("10_mbkgq")
-wander_speed = 25.0
 state_animation_duration = 0.7
 next_state = NodePath("../Idle")
 

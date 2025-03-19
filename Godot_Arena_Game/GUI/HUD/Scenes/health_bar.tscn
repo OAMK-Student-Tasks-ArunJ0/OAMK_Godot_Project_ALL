@@ -12,5 +12,6 @@ script = ExtResource("1_vkh71")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_c508t")
 centered = false
-hframes = 7
+hframes = 3
 vframes = 2
+frame = 2
