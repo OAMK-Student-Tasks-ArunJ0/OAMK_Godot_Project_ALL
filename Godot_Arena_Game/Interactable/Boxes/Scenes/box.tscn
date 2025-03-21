@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://df1igc4oalpy" path="res://Interactable/Boxes/Scripts/prop_script.gd" id="1_w5srb"]
 [ext_resource type="Texture2D" uid="uid://clvomqke8p2ol" path="res://Interactable/Boxes/Sprites/SmallProps.png" id="2_fwllc"]
 [ext_resource type="PackedScene" uid="uid://yrctujrhd6ig" path="res://Interactable/GeneralNodes/Scenes/hit_box.tscn" id="3_ssfdj"]
-[ext_resource type="AudioStream" uid="uid://dqrjuei8mtsu4" path="res://Characters/Enemies/Sounds/hit_01.wav" id="4_ii21c"]
-[ext_resource type="AudioStream" uid="uid://cue55hkr834cd" path="res://Characters/Enemies/Sounds/hit_00.wav" id="5_yjmep"]
+[ext_resource type="AudioStream" uid="uid://ba4n887i2r5ep" path="res://Characters/Enemies/Sounds/Retro Impact Punch Hurt 01.wav" id="4_ii21c"]
+[ext_resource type="AudioStream" uid="uid://veocenv6hnvs" path="res://Characters/Enemies/Sounds/Retro Impact 20.wav" id="5_yjmep"]
 [ext_resource type="Texture2D" uid="uid://p673xg6kfxgp" path="res://Characters/Enemies/Sprites/DestroySmoke.png" id="6_wh33j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dv5v2"]

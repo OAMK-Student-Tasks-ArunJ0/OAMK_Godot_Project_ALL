@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://dqi35r4uirlmv"]
+[gd_scene load_steps=62 format=3 uid="uid://dqi35r4uirlmv"]
 
 [ext_resource type="Script" uid="uid://wwiogearwfe3" path="res://Characters/Player/Scripts/player.gd" id="1_fmog5"]
 [ext_resource type="Texture2D" uid="uid://dxda6pdclrpa" path="res://Characters/Player/Sprites/Shadow.png" id="3_d4q2f"]
@@ -19,14 +19,13 @@
 [ext_resource type="Script" uid="uid://bihifu0e37jwd" path="res://Characters/Player/Scripts/states/state_hurt.gd" id="14_da22e"]
 [ext_resource type="Script" uid="uid://baf4cjowjcjr6" path="res://Characters/Player/Scripts/states/state_dash.gd" id="14_ih4mp"]
 [ext_resource type="PackedScene" uid="uid://yrctujrhd6ig" path="res://Interactable/GeneralNodes/Scenes/hit_box.tscn" id="15_06cbe"]
-[ext_resource type="AudioStream" uid="uid://cib3hsf4w3ujd" path="res://Characters/Player/Sounds/Sword_Sounds/07_human_atk_sword_1.wav" id="15_85w56"]
-[ext_resource type="AudioStream" uid="uid://cwnnndm6dbj55" path="res://Characters/Player/Sounds/Sword_Sounds/07_human_atk_sword_2.wav" id="16_1ian5"]
-[ext_resource type="AudioStream" uid="uid://beur4436wj87g" path="res://Characters/Player/Sounds/Hurt_Sounds/hit_player.wav" id="17_0jaaw"]
-[ext_resource type="AudioStream" uid="uid://2g6ywdtl4jnl" path="res://Characters/Player/Sounds/Sword_Sounds/07_human_atk_sword_3.wav" id="17_hoyvo"]
+[ext_resource type="AudioStream" uid="uid://wlhbnshrvhi2" path="res://Characters/Player/Sounds/Sword_Sounds/Retro Swooosh 07.wav" id="16_1ian5"]
+[ext_resource type="AudioStream" uid="uid://bb8h3ena5mhse" path="res://Characters/Player/Sounds/Hurt_Sounds/Retro Impact Punch 07.wav" id="17_0jaaw"]
+[ext_resource type="AudioStream" uid="uid://dttsoswnwsx7s" path="res://Characters/Player/Sounds/Sword_Sounds/Retro Swooosh 16.wav" id="17_c80r2"]
 [ext_resource type="Script" uid="uid://db1i3d2tfd5dn" path="res://Characters/Player/Scripts/states/state_death.gd" id="18_iwpc5"]
 [ext_resource type="Texture2D" uid="uid://p673xg6kfxgp" path="res://Characters/Enemies/Sprites/DestroySmoke.png" id="19_737og"]
 [ext_resource type="Script" uid="uid://dursrexjl6no5" path="res://Characters/Player/Scripts/abilities/abilities.gd" id="19_ldmix"]
-[ext_resource type="AudioStream" uid="uid://b4qbbt576amsq" path="res://Interactable/Items/Sounds/hp-up.wav" id="26_k11os"]
+[ext_resource type="AudioStream" uid="uid://blyyytrbpgwql" path="res://Interactable/Items/Sounds/Retro Magic 06.wav" id="26_k11os"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7d488"]
 radius = 5.5
@@ -2447,7 +2446,7 @@ script = ExtResource("6_fs0m3")
 
 [node name="Attack" type="Node" parent="StateMachine"]
 script = ExtResource("8_s3b7d")
-sword_sounds = Array[AudioStream]([ExtResource("15_85w56"), ExtResource("16_1ian5"), ExtResource("17_hoyvo")])
+sword_sounds = Array[AudioStream]([ExtResource("17_c80r2"), ExtResource("16_1ian5")])
 
 [node name="Death" type="Node" parent="StateMachine"]
 script = ExtResource("18_iwpc5")

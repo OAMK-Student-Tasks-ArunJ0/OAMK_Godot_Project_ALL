@@ -9,7 +9,6 @@ var speed: float = 0
 
 @export var max_speed: float = 200.0
 @export var max_distance: float = 750  # Maximum travel distance before deletion.
-@export var catch_audio: AudioStream
 @export var shuriken_damage: int = 4
 @export var stop_at_hitboxes : bool = false
 
@@ -45,7 +44,6 @@ func throw(throw_direction: Vector2) -> void:
 	direction = throw_direction
 	speed = max_speed
 	animation_player.play("shuriken")
-	PlayerManager.play_audio(catch_audio)
 	visible = true
 	# Set spawn position now that the shuriken is thrown.
 	spawn_position = global_position

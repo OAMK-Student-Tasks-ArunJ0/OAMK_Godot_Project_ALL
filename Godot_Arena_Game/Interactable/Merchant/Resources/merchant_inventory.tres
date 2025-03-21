@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="InventoryData" load_steps=21 format=3 uid="uid://beuqi0gykfv45"]
+[gd_resource type="Resource" script_class="InventoryData" load_steps=19 format=3 uid="uid://beuqi0gykfv45"]
 
 [ext_resource type="Script" uid="uid://b1k5n2harcumc" path="res://GUI/Inventory/Scripts/inventory_data.gd" id="1_arfvf"]
 [ext_resource type="Script" uid="uid://d185rg4ly0knl" path="res://GUI/Inventory/Scripts/slot_data.gd" id="2_4wm0i"]
@@ -10,7 +10,6 @@
 [ext_resource type="Resource" uid="uid://dokfju3u422yq" path="res://Interactable/Items/Resources/knife_weapon.tres" id="7_sqvav"]
 [ext_resource type="Resource" uid="uid://bnp8aj4ikkffq" path="res://Interactable/Items/Resources/shuriken_weapon.tres" id="8_gykni"]
 [ext_resource type="Resource" uid="uid://bnufw61wvn5wn" path="res://Interactable/Items/Resources/bomb_weapon.tres" id="9_qskj4"]
-[ext_resource type="Resource" uid="uid://cm3enrf7tm4k3" path="res://Interactable/Items/Resources/dash_unlock.tres" id="10_v4bvq"]
 
 [sub_resource type="Resource" id="Resource_y6si2"]
 script = ExtResource("2_4wm0i")
@@ -53,12 +52,6 @@ script = ExtResource("2_4wm0i")
 item_data = ExtResource("9_qskj4")
 quantity = 1
 
-[sub_resource type="Resource" id="Resource_a6cg6"]
-script = ExtResource("2_4wm0i")
-item_data = ExtResource("10_v4bvq")
-quantity = 1
-metadata/_custom_type_script = "uid://d185rg4ly0knl"
-
 [resource]
 script = ExtResource("1_arfvf")
-slots = Array[ExtResource("2_4wm0i")]([SubResource("Resource_y6si2"), SubResource("Resource_yurjo"), SubResource("Resource_vfdfi"), SubResource("Resource_jqx5q"), SubResource("Resource_tq84o"), SubResource("Resource_qgwf3"), SubResource("Resource_acaaj"), SubResource("Resource_m6vse"), SubResource("Resource_a6cg6"), null, null, null, null, null, null, null])
+slots = Array[ExtResource("2_4wm0i")]([SubResource("Resource_y6si2"), SubResource("Resource_yurjo"), SubResource("Resource_vfdfi"), SubResource("Resource_jqx5q"), SubResource("Resource_tq84o"), SubResource("Resource_qgwf3"), SubResource("Resource_acaaj"), SubResource("Resource_m6vse"), null, null, null, null, null, null, null])

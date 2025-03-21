@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bq8ln1vuv2nyi" path="res://Interactable/Arena/Scripts/item_dropper.gd" id="1_gpj36"]
 [ext_resource type="Texture2D" uid="uid://1hhjhw2wgfil" path="res://Interactable/Items/Sprites/UndeadPackSprites/Poison.png" id="2_b5om1"]
 [ext_resource type="Script" uid="uid://bdcnqrikd4lw2" path="res://Interactable/GeneralNodes/Scripts/persistent_data_handler.gd" id="2_gl12y"]
-[ext_resource type="AudioStream" uid="uid://c2xh2b5ubb2d0" path="res://Interactable/Arena/Sounds/dungeon_discovery.wav" id="2_qtas1"]
+[ext_resource type="AudioStream" uid="uid://bg4bt1quyym2t" path="res://Interactable/Arena/Sounds/Retro PickUp Coin StereoUP 04.wav" id="2_qtas1"]
 
 [node name="ItemDropper" type="Node2D"]
 script = ExtResource("1_gpj36")

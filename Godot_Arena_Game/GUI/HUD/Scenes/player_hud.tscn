@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dn4civwvrmjvb"]
+[gd_scene load_steps=7 format=3 uid="uid://dn4civwvrmjvb"]
 
 [ext_resource type="Script" uid="uid://dlqvdy8iqhjef" path="res://GUI/HUD/Scripts/player_hud.gd" id="1_r3gwt"]
-[ext_resource type="Texture2D" uid="uid://dece8pnx4athx" path="res://GUI/HUD/Sprites/gui-health.png" id="2_5w3p1"]
 [ext_resource type="PackedScene" uid="uid://wdaskarv20p3" path="res://GUI/HUD/Scenes/health_bar.tscn" id="3_7jfe3"]
 [ext_resource type="PackedScene" uid="uid://dx3d6ey4wnvxy" path="res://GUI/HUD/Scenes/death_screen.tscn" id="4_y4d6p"]
 
@@ -79,13 +78,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="Control"]
-visible = false
-position = Vector2(292, 7)
-texture = ExtResource("2_5w3p1")
-region_enabled = true
-region_rect = Rect2(29, 0, 34, 8)
 
 [node name="HFlowContainer" type="HFlowContainer" parent="Control"]
 layout_mode = 0
@@ -174,6 +166,7 @@ offset_top = 2.0
 offset_right = 338.0
 offset_bottom = 38.0
 theme_override_font_sizes/font_size = 11
+text = "Text"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -185,7 +178,7 @@ offset_top = 2.0
 offset_right = 334.0
 offset_bottom = 18.0
 theme_override_font_sizes/font_size = 11
-text = "Ranged CD : 5"
+text = "Ranged CD : 4.5"
 horizontal_alignment = 1
 
 [node name="DeathScreen" parent="Control" instance=ExtResource("4_y4d6p")]

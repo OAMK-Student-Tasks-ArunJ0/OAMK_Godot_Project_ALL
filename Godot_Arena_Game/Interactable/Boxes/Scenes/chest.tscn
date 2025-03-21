@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cxc77agl001an" path="res://Interactable/Boxes/Sprites/Treasure Chests (Toony).png" id="2_v3own"]
 [ext_resource type="Texture2D" uid="uid://w5ttmyoqtn0e" path="res://Interactable/Items/Sprites/UndeadPackSprites/Ruby.png" id="3_3yxhf"]
 [ext_resource type="Texture2D" uid="uid://dxda6pdclrpa" path="res://Characters/Player/Sprites/Shadow.png" id="4_kgs4u"]
-[ext_resource type="AudioStream" uid="uid://dkrlgohs4yto0" path="res://Interactable/Boxes/Sounds/treasure-open.wav" id="5_4bstl"]
+[ext_resource type="AudioStream" uid="uid://cimwoom6ul7ki" path="res://Interactable/Boxes/Sounds/Retro PickUp 10.wav" id="5_4bstl"]
 [ext_resource type="PackedScene" uid="uid://dsg4sckw6ep5n" path="res://Interactable/GeneralNodes/Scenes/persistent_data_handler.tscn" id="6_tlx7k"]
 
 [sub_resource type="Animation" id="Animation_lv1cj"]
@@ -202,6 +202,8 @@ script = ExtResource("1_r6afn")
 item_data = ExtResource("2_jnseg")
 quantity = 10
 
+[node name="PersistentData_IsOpen" parent="." instance=ExtResource("6_tlx7k")]
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -6)
 texture = ExtResource("2_v3own")
@@ -259,5 +261,3 @@ monitorable = false
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_7abnd")
 debug_color = Color(0, 0.646515, 0.235154, 0.42)
-
-[node name="PersistentData_IsOpen" parent="." instance=ExtResource("6_tlx7k")]

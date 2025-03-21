@@ -16,6 +16,8 @@ var is_open : bool = false
 @onready var is_open_data: PersistentDataHandler = $PersistentDataHandler
 @onready var interact_area: Area2D = $InteractArea2D
 
+var opening_active : bool = false
+
 func _ready() -> void:
 	# Connect signals for player interaction.
 	interact_area.area_entered.connect(_on_area_enter)
@@ -26,8 +28,9 @@ func _ready() -> void:
 
 func open_door() -> void:
 	# If no key is set, do nothing.
-	if key_item == null:
+	if key_item == null or opening_active == true:
 		return
+	opening_active = true
 	# Attempt to use the key from the player's inventory.
 	var door_unlocked = PlayerManager.INVENTORY_DATA.use_item(key_item)
 	
@@ -41,6 +44,7 @@ func open_door() -> void:
 		# Otherwise, inform the player that the door is locked.
 		SaveManager.new_hud_message.emit("Door Locked...", 1.0)
 		audio.stream = locked_audio
+		opening_active = false
 	audio.play()
 	pass
 

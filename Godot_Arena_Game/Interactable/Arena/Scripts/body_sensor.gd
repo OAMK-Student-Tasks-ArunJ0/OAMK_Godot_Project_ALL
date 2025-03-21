@@ -19,8 +19,8 @@ var off_rect : Rect2
 
 @onready var area_2d: Area2D = $Area2D
 @onready var audio : AudioStreamPlayer2D = $AudioStreamPlayer2D
-@onready var audio_activate : AudioStream = preload("res://Interactable/Arena/Sounds/lever-01.wav")
-@onready var audio_deactivate : AudioStream = preload("res://Interactable/Arena/Sounds/lever-02.wav")
+@onready var audio_activate : AudioStream = preload("res://Interactable/Arena/Sounds/Retro PickUp Coin StereoUP 04.wav")
+@onready var audio_deactivate : AudioStream = preload("res://Interactable/Arena/Sounds/Retro Impact Punch 07.wav")
 
 func _ready() -> void:
 	# Connect area signals to monitor bodies entering and exiting.

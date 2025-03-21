@@ -4,12 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://p673xg6kfxgp" path="res://Characters/Enemies/Sprites/DestroySmoke.png" id="2_ta4lg"]
 [ext_resource type="Texture2D" uid="uid://dxda6pdclrpa" path="res://Characters/Player/Sprites/Shadow.png" id="2_xlyhj"]
 [ext_resource type="PackedScene" uid="uid://de7wd545xo76f" path="res://Interactable/GeneralNodes/Scenes/hurt_box.tscn" id="3_3mise"]
-[ext_resource type="AudioStream" uid="uid://cue55hkr834cd" path="res://Characters/Enemies/Sounds/hit_00.wav" id="3_qnjud"]
+[ext_resource type="AudioStream" uid="uid://veocenv6hnvs" path="res://Characters/Enemies/Sounds/Retro Impact 20.wav" id="3_qnjud"]
 [ext_resource type="Texture2D" uid="uid://bdwsp372l1axj" path="res://Interactable/Items/Sprites/IconPack/Icon46.png" id="4_1cg6j"]
-[ext_resource type="AudioStream" uid="uid://c5pk15mabvyu4" path="res://Characters/Player/Sounds/Shuriken_Sounds/shuriken.wav" id="4_8hewi"]
+[ext_resource type="AudioStream" uid="uid://bmmek64426mhf" path="res://Characters/Player/Sounds/Shuriken_Sounds/Retro Weapon Arrow 02.wav" id="4_8hewi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6415x"]
-radius = 14.0
+radius = 10.0499
 
 [sub_resource type="Animation" id="Animation_7fxhh"]
 length = 0.001
@@ -59,7 +59,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(2.125, 5.3125)]
+"values": [Vector2(0, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -277,7 +277,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(0.5, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(3.25, 8.125)]
+"values": [Vector2(0, 0), Vector2(2.7, 6.75)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -336,7 +336,6 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k7rcx"]
-radius = 14.1421
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rfb0u"]
 radius = 34.0
@@ -349,20 +348,20 @@ script = ExtResource("1_svctj")
 visible = false
 modulate = Color(1, 0.215686, 0, 0.392157)
 position = Vector2(9.53674e-07, -19)
-scale = Vector2(2.125, 5.3125)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("2_xlyhj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.196078, 0.196078, 0.196078, 1)
 position = Vector2(0, -16)
-scale = Vector2(1.6, 1.6)
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("2_ta4lg")
 hframes = 6
 
 [node name="BombSprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.784314, 0.784314, 0.784314, 1)
 position = Vector2(-1, -15.4)
-scale = Vector2(1.173, 0.829)
+scale = Vector2(0.84, 0.56)
 texture = ExtResource("4_1cg6j")
 
 [node name="Area2D" type="Area2D" parent="."]

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=7 format=3 uid="uid://dokfju3u422yq"]
 
 [ext_resource type="Script" uid="uid://bcejuef48smxt" path="res://Interactable/Items/Scripts/item_effect.gd" id="1_jspo8"]
-[ext_resource type="AudioStream" uid="uid://cib3hsf4w3ujd" path="res://Characters/Player/Sounds/Sword_Sounds/07_human_atk_sword_1.wav" id="2_i188f"]
+[ext_resource type="AudioStream" uid="uid://dr3kte0u5e3sh" path="res://Characters/Player/Sounds/Sword_Sounds/Retro Swooosh 02.wav" id="2_i188f"]
 [ext_resource type="Script" uid="uid://dy6w2u8n586jw" path="res://Interactable/Items/Scripts/item_effect_change_weapon.gd" id="3_fh2gi"]
 [ext_resource type="Script" uid="uid://dtcifi2whwlae" path="res://Interactable/Items/Scripts/item_data.gd" id="4_47rug"]
 [ext_resource type="Texture2D" uid="uid://dw5o1y7c5f45y" path="res://Interactable/Items/Sprites/UndeadPackSprites/KnifeIcon.png" id="5_0be7n"]

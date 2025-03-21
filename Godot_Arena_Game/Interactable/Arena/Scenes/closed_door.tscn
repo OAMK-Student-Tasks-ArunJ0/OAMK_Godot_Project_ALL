@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://boxf23ysiex65" path="res://Interactable/Arena/Scripts/closed_door.gd" id="1_o0pop"]
 [ext_resource type="Texture2D" uid="uid://3j4cafqcaasg" path="res://Levels/Sprites/Dungeon Prison/Assets/DungeonDoors.png" id="2_cahju"]
-[ext_resource type="AudioStream" uid="uid://54iwpsyhdgr1" path="res://Interactable/Arena/Sounds/bars_open.wav" id="3_bmqit"]
+[ext_resource type="AudioStream" uid="uid://dm6ioxb7ycp8x" path="res://Interactable/Arena/Sounds/Retro Impact Metal 36.wav" id="3_bmqit"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_anj27"]
 size = Vector2(32, 8)

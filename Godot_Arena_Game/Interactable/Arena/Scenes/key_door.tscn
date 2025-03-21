@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://bstqho3ni7jdb" path="res://Interactable/Arena/Scripts/key_door.gd" id="1_oi845"]
 [ext_resource type="Texture2D" uid="uid://3j4cafqcaasg" path="res://Levels/Sprites/Dungeon Prison/Assets/DungeonDoors.png" id="2_74fk6"]
 [ext_resource type="Resource" uid="uid://y6ouymn7bw81" path="res://Interactable/Items/Resources/key_arena.tres" id="2_ovyfg"]
-[ext_resource type="AudioStream" uid="uid://gvtxfq1h3ngc" path="res://Interactable/Arena/Sounds/locked_door.wav" id="2_pabew"]
-[ext_resource type="AudioStream" uid="uid://hf86g0ie6v2a" path="res://Interactable/Arena/Sounds/unlock_door.wav" id="3_d1uxy"]
+[ext_resource type="AudioStream" uid="uid://n7o2xsxflfnq" path="res://Interactable/Arena/Sounds/Retro Impact Punch 07.wav" id="2_pabew"]
+[ext_resource type="AudioStream" uid="uid://bg4bt1quyym2t" path="res://Interactable/Arena/Sounds/Retro PickUp Coin StereoUP 04.wav" id="3_d1uxy"]
 [ext_resource type="Script" uid="uid://bdcnqrikd4lw2" path="res://Interactable/GeneralNodes/Scripts/persistent_data_handler.gd" id="3_pr80s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_anj27"]

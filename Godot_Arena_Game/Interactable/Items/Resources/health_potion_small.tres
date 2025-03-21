@@ -16,4 +16,4 @@ name = "Small Health Potion"
 description = "Small health potion!"
 texture = ExtResource("4_fqmye")
 effects = Array[ExtResource("1_okhnx")]([SubResource("Resource_11svw")])
-sell_value = 6
+sell_value = 10

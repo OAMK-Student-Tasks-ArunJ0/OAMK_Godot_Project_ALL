@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://df1igc4oalpy" path="res://Interactable/Boxes/Scripts/prop_script.gd" id="1_oi2nj"]
 [ext_resource type="PackedScene" uid="uid://yrctujrhd6ig" path="res://Interactable/GeneralNodes/Scenes/hit_box.tscn" id="2_gm4p8"]
 [ext_resource type="Texture2D" uid="uid://p673xg6kfxgp" path="res://Characters/Enemies/Sprites/DestroySmoke.png" id="4_lgcjw"]
-[ext_resource type="AudioStream" uid="uid://dqrjuei8mtsu4" path="res://Characters/Enemies/Sounds/hit_01.wav" id="4_ljk4r"]
-[ext_resource type="AudioStream" uid="uid://cue55hkr834cd" path="res://Characters/Enemies/Sounds/hit_00.wav" id="5_qhxhx"]
+[ext_resource type="AudioStream" uid="uid://ba4n887i2r5ep" path="res://Characters/Enemies/Sounds/Retro Impact Punch Hurt 01.wav" id="4_ljk4r"]
+[ext_resource type="AudioStream" uid="uid://veocenv6hnvs" path="res://Characters/Enemies/Sounds/Retro Impact 20.wav" id="5_qhxhx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nq2va"]
 radius = 8.0

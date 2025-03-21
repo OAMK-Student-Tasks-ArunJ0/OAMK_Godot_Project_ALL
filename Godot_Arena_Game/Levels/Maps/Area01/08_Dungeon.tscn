@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://0j6o5q5c8yur" path="res://Interactable/Merchant/Scenes/merchant.tscn" id="8_5itp8"]
 [ext_resource type="PackedScene" uid="uid://c22xcp0qt4nlu" path="res://Interactable/Arena/Scenes/question_mark.tscn" id="9_sqft0"]
 [ext_resource type="PackedScene" uid="uid://cqeoi3sthe4li" path="res://Interactable/Arena/Scenes/room_save.tscn" id="10_s5lu2"]
-[ext_resource type="AudioStream" uid="uid://c6efo1ssl2s84" path="res://Interactable/Items/Sounds/item_pickup.wav" id="11_xmr1h"]
+[ext_resource type="AudioStream" uid="uid://dl7gq3hoq2lv2" path="res://Interactable/Items/Sounds/Retro PickUp Coin 04.wav" id="11_xmr1h"]
 [ext_resource type="PackedScene" uid="uid://cbcnmye602fng" path="res://Interactable/Arena/Scenes/closed_door.tscn" id="12_bbkx8"]
 [ext_resource type="PackedScene" uid="uid://b5yotodh2kbc4" path="res://Levels/Maps/accessory_tiles.tscn" id="13_tcviy"]
 [ext_resource type="PackedScene" uid="uid://b5efpp6bfx7fn" path="res://Interactable/Arena/Scenes/body_sensor.tscn" id="14_ew5id"]

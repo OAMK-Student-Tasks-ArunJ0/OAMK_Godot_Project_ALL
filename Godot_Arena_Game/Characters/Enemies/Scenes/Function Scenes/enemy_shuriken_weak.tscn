@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dpnayonetcgvk"]
+[gd_scene load_steps=9 format=3 uid="uid://dpnayonetcgvk"]
 
 [ext_resource type="Script" uid="uid://xmiq7fgfqxxm" path="res://Characters/Enemies/Scripts/Assets/enemy_shuriken.gd" id="1_wvrkd"]
-[ext_resource type="AudioStream" uid="uid://5q6n7v6un66c" path="res://Characters/Player/Sounds/Shuriken_Sounds/catch.wav" id="2_brrsn"]
 [ext_resource type="Texture2D" uid="uid://cp27xxjc6fyy2" path="res://Characters/Player/Sprites/Shuriken.png" id="3_n103h"]
 [ext_resource type="PackedScene" uid="uid://de7wd545xo76f" path="res://Interactable/GeneralNodes/Scenes/hurt_box.tscn" id="4_t77do"]
-[ext_resource type="AudioStream" uid="uid://c5pk15mabvyu4" path="res://Characters/Player/Sounds/Shuriken_Sounds/shuriken.wav" id="5_1hry3"]
+[ext_resource type="AudioStream" uid="uid://bmmek64426mhf" path="res://Characters/Player/Sounds/Shuriken_Sounds/Retro Weapon Arrow 02.wav" id="5_1hry3"]
 
 [sub_resource type="Animation" id="Animation_7fxhh"]
 length = 0.001
@@ -51,7 +50,6 @@ radius = 16.0
 [node name="EnemyShurikenWeak" type="Node2D"]
 z_index = 2
 script = ExtResource("1_wvrkd")
-catch_audio = ExtResource("2_brrsn")
 stop_at_hitboxes = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

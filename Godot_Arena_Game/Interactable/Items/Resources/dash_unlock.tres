@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=8 format=3 uid="uid://cm3enrf7tm4k3"]
 
 [ext_resource type="Script" uid="uid://bcejuef48smxt" path="res://Interactable/Items/Scripts/item_effect.gd" id="1_5m4vt"]
-[ext_resource type="AudioStream" uid="uid://5q6n7v6un66c" path="res://Characters/Player/Sounds/Shuriken_Sounds/catch.wav" id="2_5m4vt"]
+[ext_resource type="AudioStream" uid="uid://bmmek64426mhf" path="res://Characters/Player/Sounds/Shuriken_Sounds/Retro Weapon Arrow 02.wav" id="2_5m4vt"]
 [ext_resource type="Script" uid="uid://cif42uoc3c22h" path="res://Interactable/Items/Scripts/item_effect_unlock_dash.gd" id="3_rj58e"]
 [ext_resource type="Script" uid="uid://dtcifi2whwlae" path="res://Interactable/Items/Scripts/item_data.gd" id="4_v5u32"]
 [ext_resource type="Texture2D" uid="uid://b2pph2hle0mmp" path="res://Interactable/Items/Sprites/IconPack/Icon2.png" id="5_5m4vt"]

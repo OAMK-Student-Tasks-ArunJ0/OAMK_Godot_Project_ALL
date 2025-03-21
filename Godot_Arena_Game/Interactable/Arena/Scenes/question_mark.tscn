@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c22xcp0qt4nlu"]
 
 [ext_resource type="Script" uid="uid://dnjuqx1idun1x" path="res://Interactable/Arena/Scripts/question_mark.gd" id="1_k16cf"]
-[ext_resource type="AudioStream" uid="uid://b4qbbt576amsq" path="res://Interactable/Items/Sounds/hp-up.wav" id="2_qeuhy"]
+[ext_resource type="AudioStream" uid="uid://blyyytrbpgwql" path="res://Interactable/Items/Sounds/Retro Magic 06.wav" id="2_qeuhy"]
 [ext_resource type="Texture2D" uid="uid://ciqgkdqoui3p1" path="res://Interactable/Arena/Sprites/question_mark.png" id="3_yhl0e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abh27"]

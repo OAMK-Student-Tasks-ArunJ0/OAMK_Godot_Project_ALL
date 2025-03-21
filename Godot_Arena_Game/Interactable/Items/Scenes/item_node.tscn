@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://co1wcq4b1vi25" path="res://Interactable/Items/Scripts/item_node.gd" id="1_8folk"]
 [ext_resource type="Texture2D" uid="uid://dxda6pdclrpa" path="res://Characters/Player/Sprites/Shadow.png" id="2_dm1n8"]
 [ext_resource type="Texture2D" uid="uid://csj5stlhcv2qn" path="res://Interactable/Items/Sprites/UndeadPackSprites/Skull.png" id="3_7pvcv"]
-[ext_resource type="AudioStream" uid="uid://c6efo1ssl2s84" path="res://Interactable/Items/Sounds/item_pickup.wav" id="4_0mfcx"]
+[ext_resource type="AudioStream" uid="uid://dl7gq3hoq2lv2" path="res://Interactable/Items/Sounds/Retro PickUp Coin 04.wav" id="4_0mfcx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8iy0p"]
 radius = 18.3333
@@ -74,6 +74,6 @@ stream = ExtResource("4_0mfcx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_kknff")
+&"": SubResource("AnimationLibrary_kknff")
 }
 autoplay = "bounce"

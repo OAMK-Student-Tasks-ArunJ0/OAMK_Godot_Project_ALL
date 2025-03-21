@@ -1,12 +1,12 @@
-[gd_scene load_steps=60 format=3 uid="uid://d00v617s1mfy0"]
+[gd_scene load_steps=59 format=3 uid="uid://d00v617s1mfy0"]
 
 [ext_resource type="Script" uid="uid://dsb803dfkares" path="res://Characters/Enemies/Scripts/General/enemy.gd" id="1_a0dn5"]
 [ext_resource type="PackedScene" uid="uid://yrctujrhd6ig" path="res://Interactable/GeneralNodes/Scenes/hit_box.tscn" id="2_ffrwk"]
 [ext_resource type="Texture2D" uid="uid://ora0w5kaxocn" path="res://Characters/Enemies/Sprites/ShadowEnemy.png" id="4_e41d8"]
 [ext_resource type="Texture2D" uid="uid://blqm05eo5vabj" path="res://Characters/Enemies/Sprites/Simple_Orc/orc1_idle_full.png" id="4_m0o15"]
 [ext_resource type="Texture2D" uid="uid://47e2nmmjmf3d" path="res://Characters/Enemies/Sprites/Simple_Orc/orc1_death_full.png" id="5_onklf"]
-[ext_resource type="AudioStream" uid="uid://dqrjuei8mtsu4" path="res://Characters/Enemies/Sounds/hit_01.wav" id="5_y28t1"]
-[ext_resource type="AudioStream" uid="uid://cue55hkr834cd" path="res://Characters/Enemies/Sounds/hit_00.wav" id="6_wus6f"]
+[ext_resource type="AudioStream" uid="uid://ba4n887i2r5ep" path="res://Characters/Enemies/Sounds/Retro Impact Punch Hurt 01.wav" id="5_y28t1"]
+[ext_resource type="AudioStream" uid="uid://veocenv6hnvs" path="res://Characters/Enemies/Sounds/Retro Impact 20.wav" id="6_wus6f"]
 [ext_resource type="Script" uid="uid://dts0hx07x00c6" path="res://Characters/Enemies/Scripts/General/enemy_state_machine.gd" id="7_im4u8"]
 [ext_resource type="Texture2D" uid="uid://ic4arabor75w" path="res://Characters/Enemies/Sprites/Simple_Orc/orc1_hurt_full.png" id="7_j5xkt"]
 [ext_resource type="Texture2D" uid="uid://bbv0j0ai2fteu" path="res://Characters/Enemies/Sprites/Simple_Orc/orc1_walk_full.png" id="7_obr51"]
@@ -23,10 +23,9 @@
 [ext_resource type="Script" uid="uid://dxwdnso014y68" path="res://Characters/Enemies/Scripts/General/states/enemy_state_charge.gd" id="20_p6njq"]
 [ext_resource type="Script" uid="uid://cbv0kd1swx5vm" path="res://Characters/Enemies/Scripts/General/states/enemy_state_attack.gd" id="21_fb4u1"]
 [ext_resource type="PackedScene" uid="uid://b557cy6cip13k" path="res://Characters/Enemies/Scenes/Function Scenes/vision_range.tscn" id="21_i3plo"]
-[ext_resource type="AudioStream" uid="uid://cib3hsf4w3ujd" path="res://Characters/Player/Sounds/Sword_Sounds/07_human_atk_sword_1.wav" id="21_spx6i"]
-[ext_resource type="AudioStream" uid="uid://cwnnndm6dbj55" path="res://Characters/Player/Sounds/Sword_Sounds/07_human_atk_sword_2.wav" id="22_2ilok"]
+[ext_resource type="AudioStream" uid="uid://dttsoswnwsx7s" path="res://Characters/Player/Sounds/Sword_Sounds/Retro Swooosh 16.wav" id="22_0q0lc"]
+[ext_resource type="AudioStream" uid="uid://wlhbnshrvhi2" path="res://Characters/Player/Sounds/Sword_Sounds/Retro Swooosh 07.wav" id="22_2ilok"]
 [ext_resource type="PackedScene" uid="uid://cg4iqo01q26vo" path="res://Characters/Enemies/Scenes/Function Scenes/enemy_attack_range.tscn" id="22_mru0h"]
-[ext_resource type="AudioStream" uid="uid://2g6ywdtl4jnl" path="res://Characters/Player/Sounds/Sword_Sounds/07_human_atk_sword_3.wav" id="23_wd7e5"]
 [ext_resource type="PackedScene" uid="uid://bd8l4b5t3eurs" path="res://Characters/Enemies/Scenes/Function Scenes/enemy_healthbar.tscn" id="26_2jhui"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kjwdx"]
@@ -1908,7 +1907,7 @@ enemy_attack_range = NodePath("../../VisionRange/EnemyAttackRange")
 script = ExtResource("21_fb4u1")
 anim_name = "attack"
 next_state = NodePath("../Charge")
-sword_sounds = Array[AudioStream]([ExtResource("21_spx6i"), ExtResource("22_2ilok"), ExtResource("23_wd7e5")])
+sword_sounds = Array[AudioStream]([ExtResource("22_0q0lc"), ExtResource("22_2ilok")])
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 max_polyphony = 4

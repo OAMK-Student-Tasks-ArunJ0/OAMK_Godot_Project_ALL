@@ -13,7 +13,6 @@ var state
 
 @export var acceleration: float = 500
 @export var max_speed: float = 400
-@export var catch_audio: AudioStream
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var audio: AudioStreamPlayer2D = $AudioStreamPlayer2D
@@ -37,7 +36,6 @@ func _physics_process(delta: float) -> void:
 		speed += acceleration * delta
 		position += direction * speed * delta
 		if global_position.distance_to(player.global_position) <= 10:
-			PlayerManager.play_audio(catch_audio)
 			queue_free()
 	
 	# Adjust audio pitch and animation speed based on current speed.
@@ -54,6 +52,5 @@ func throw(throw_direction: Vector2) -> void:
 	speed = max_speed
 	state = State.THROW
 	animation_player.play("shuriken")
-	PlayerManager.play_audio(catch_audio)
 	visible = true
 	pass
