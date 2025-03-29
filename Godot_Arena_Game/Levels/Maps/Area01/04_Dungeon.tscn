@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://frccix4y7rom" path="res://Levels/Scenes/level_transition.tscn" id="5_dfv55"]
 [ext_resource type="PackedScene" uid="uid://cr2ceuupt6g47" path="res://Interactable/Boxes/Scenes/chest.tscn" id="6_yhdtb"]
 [ext_resource type="Resource" uid="uid://b4inupoclw672" path="res://Interactable/Items/Resources/health_upgrade.tres" id="9_h8u5s"]
-[ext_resource type="Resource" uid="uid://y6ouymn7bw81" path="res://Interactable/Items/Resources/key_arena.tres" id="9_o688j"]
+[ext_resource type="Resource" uid="uid://y6ouymn7bw81" path="res://Interactable/Items/Resources/key_dungeon.tres" id="9_o688j"]
 
 [node name="04_Dungeon" type="Node2D"]
 script = ExtResource("1_q6cu2")

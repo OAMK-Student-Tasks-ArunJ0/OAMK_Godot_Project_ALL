@@ -1646,7 +1646,7 @@ _data = {
 &"destroy": SubResource("Animation_qp414")
 }
 
-[node name="Orc Ranged Bomb" type="CharacterBody2D"]
+[node name="Ranged Orc Bomb" type="CharacterBody2D"]
 collision_layer = 256
 collision_mask = 16
 script = ExtResource("1_r7evv")

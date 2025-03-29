@@ -195,7 +195,7 @@ offset_bottom = 245.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="Prologue" parent="Control" instance=ExtResource("4_qovw3")]
+[node name="Tutorial" parent="Control" instance=ExtResource("4_qovw3")]
 visible = false
 layout_mode = 0
 anchors_preset = 0

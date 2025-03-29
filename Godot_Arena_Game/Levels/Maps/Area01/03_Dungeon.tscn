@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://frccix4y7rom" path="res://Levels/Scenes/level_transition.tscn" id="7_ukm6a"]
 [ext_resource type="PackedScene" uid="uid://cr2ceuupt6g47" path="res://Interactable/Boxes/Scenes/chest.tscn" id="8_qfs6b"]
 [ext_resource type="Resource" uid="uid://cm3enrf7tm4k3" path="res://Interactable/Items/Resources/dash_unlock.tres" id="9_j42eh"]
-[ext_resource type="Resource" uid="uid://y6ouymn7bw81" path="res://Interactable/Items/Resources/key_arena.tres" id="10_j42eh"]
+[ext_resource type="Resource" uid="uid://y6ouymn7bw81" path="res://Interactable/Items/Resources/key_dungeon.tres" id="10_j42eh"]
 [ext_resource type="PackedScene" uid="uid://cbcnmye602fng" path="res://Interactable/Arena/Scenes/closed_door.tscn" id="11_4fsew"]
 [ext_resource type="PackedScene" uid="uid://b5efpp6bfx7fn" path="res://Interactable/Arena/Scenes/body_sensor.tscn" id="12_vuuk7"]
 

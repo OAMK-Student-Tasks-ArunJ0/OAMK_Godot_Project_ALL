@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c1flmq45s3gg0" path="res://Characters/Enemies/Scenes/Enemies/slime.tscn" id="12_gj4s8"]
 [ext_resource type="PackedScene" uid="uid://bgwnni38np83r" path="res://Interactable/Arena/Scenes/key_door.tscn" id="12_pe25t"]
 [ext_resource type="PackedScene" uid="uid://dq6pl3mb4r2ji" path="res://Interactable/Arena/Scenes/item_dropper.tscn" id="13_gdyrh"]
-[ext_resource type="Resource" uid="uid://y6ouymn7bw81" path="res://Interactable/Items/Resources/key_arena.tres" id="14_6l4h4"]
+[ext_resource type="Resource" uid="uid://y6ouymn7bw81" path="res://Interactable/Items/Resources/key_dungeon.tres" id="14_6l4h4"]
 
 [node name="03_Forest" type="Node2D"]
 y_sort_enabled = true

@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cn0phq2058m0h" path="res://Characters/Enemies/Scenes/Enemies/ranged_orc_shuriken.tscn" id="14_w6d3s"]
 [ext_resource type="PackedScene" uid="uid://b721g851n53yw" path="res://Characters/Enemies/Scenes/Enemies/ranged_orc_bomb.tscn" id="15_ihyg2"]
 [ext_resource type="PackedScene" uid="uid://dq6pl3mb4r2ji" path="res://Interactable/Arena/Scenes/item_dropper.tscn" id="15_w6d3s"]
-[ext_resource type="Resource" uid="uid://y6ouymn7bw81" path="res://Interactable/Items/Resources/key_arena.tres" id="16_ihyg2"]
+[ext_resource type="Resource" uid="uid://y6ouymn7bw81" path="res://Interactable/Items/Resources/key_dungeon.tres" id="16_ihyg2"]
 [ext_resource type="PackedScene" uid="uid://cr2ceuupt6g47" path="res://Interactable/Boxes/Scenes/chest.tscn" id="19_5m7wk"]
 
 [node name="06_Dungeon" type="Node2D"]

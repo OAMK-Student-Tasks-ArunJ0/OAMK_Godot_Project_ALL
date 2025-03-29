@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://frccix4y7rom" path="res://Levels/Scenes/level_transition.tscn" id="7_5nj2b"]
 [ext_resource type="PackedScene" uid="uid://dq6pl3mb4r2ji" path="res://Interactable/Arena/Scenes/item_dropper.tscn" id="8_ghv05"]
 [ext_resource type="PackedScene" uid="uid://c22xcp0qt4nlu" path="res://Interactable/Arena/Scenes/question_mark.tscn" id="8_gmhv1"]
-[ext_resource type="Resource" uid="uid://y6ouymn7bw81" path="res://Interactable/Items/Resources/key_arena.tres" id="9_46bp3"]
+[ext_resource type="Resource" uid="uid://y6ouymn7bw81" path="res://Interactable/Items/Resources/key_dungeon.tres" id="9_46bp3"]
 [ext_resource type="PackedScene" uid="uid://cn0phq2058m0h" path="res://Characters/Enemies/Scenes/Enemies/ranged_orc_shuriken.tscn" id="9_78ldj"]
 [ext_resource type="PackedScene" uid="uid://bgwnni38np83r" path="res://Interactable/Arena/Scenes/key_door.tscn" id="9_t60jr"]
 [ext_resource type="Script" uid="uid://c0ak4kbdx1r45" path="res://Interactable/GeneralNodes/Scripts/enemy_death_count.gd" id="10_xj48a"]
