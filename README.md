@@ -4,6 +4,24 @@ Tämä on 2D top-down RPG -peli, joka on tehty Godot Engineä käyttäen. Projek
 
 [Projektin tiedostot OneDrivessa](https://unioulu-my.sharepoint.com/:f:/r/personal/t0nian05_students_oamk_fi/Documents/Opinn%C3%A4ytety%C3%B6%20-%20Arena%20Game?csf=1&web=1&e=YLwJug)
 
+## Vaatimukset
+
+- **Godot Engine 4.3 tai uudempi**  
+  Lataa ja asenna [Godot Engine](https://godotengine.org/download).
+
+---
+
+## Näin avaat ja käynnistät projektin Godotilla
+
+1. **Avaa Godot Editor**  
+   Käynnistä Godot Editor koneellasi.
+2. **Tuo projekti**  
+   Klikkaa Godotin Project Managerissa **"Import"** ja selaa kansioon, jossa `project.godot` sijaitsee.
+3. **Tarkista editorin asetukset (tarvittaessa)**  
+   Varmista, että esimerkiksi `.vscode/settings.json` on ajan tasalla.
+4. **Käynnistä projekti**  
+   Paina F5 tai klikkaa **"Play"** -painiketta pelin suorittamiseksi.
+
 ---
 
 ## Sisällysluettelo
@@ -122,10 +140,10 @@ Tässä osiossa esitellään lyhyesti projektin keskeiset osat ja niiden toteutu
   Ovet (closed_door.tscn ja key_door.tscn) vaihtavat tilaansa pelaajan vuorovaikutuksen ja avainten käytön perusteella.
   
 - **Esineiden pudotus ja keräys:**  
-  ItemDropper-järjestelmä vastaa esineiden luomisesta kentälle, ja ne kerätään automaattisesti inventaarioon.
+  ItemNode ja EnemyStateDeath vastaa esineiden luomisesta kentälle, ja ne kerätään automaattisesti inventaarioon.
   
 - **Ympäristöobjektit:**  
-  Barret, arkut ja muut objektit reagoivat pelaajan toimintaan ja voivat käynnistää erilaisia tapahtumia kentällä.
+  Tynnyrit, arkut ja muut objektit reagoivat pelaajan toimintaan ja voivat käynnistää erilaisia tapahtumia kentällä.
 
 ### Tasot ja ympäristö
 
@@ -141,7 +159,7 @@ Tässä osiossa esitellään lyhyesti projektin keskeiset osat ja niiden toteutu
   Näyttää pelaajan terveyden, kykyjen odotusajat ja muut keskeiset pelitiedot.
   
 - **Valikot:**  
-  Päävalikko, inventaario, asetukset ja kuolemanäkymä (Death Screen) ovat toteutettu omissa sceneissään ja skripteissään, jotka hallitsevat käyttäjäsyötettä ja tilojen vaihtoa.
+  Päävalikko, inventaario, asetukset ja kuolemanäkymä (DeathScreen) ovat toteutettu omissa sceneissään ja skripteissään, jotka hallitsevat käyttäjäsyötettä ja tilojen vaihtoa.
   
 - **Reaktiivisuus:**  
   UI-komponentit päivittyvät reaaliajassa, mikä varmistaa selkeän ja johdonmukaisen pelikokemuksen.
@@ -156,47 +174,13 @@ Tässä osiossa esitellään lyhyesti projektin keskeiset osat ja niiden toteutu
 
 ### Tallennus- ja latausjärjestelmä
 
-- **Dynaaminen tallennus:**  
+- **Tallennus:**  
   Pelaajan sijainti, terveys, inventaario ja muut tilat tallennetaan JSON-muotoon, jolloin tiedot ovat helposti luettavissa ja muokattavissa.
   
 - **Pysyvyys:**  
   Tietyt objektien tilat, kuten avatut ovet ja suoritetut tehtävät, säilyvät myös kenttien vaihdon jälkeen.
-  
-- **Käyttäjäpalautteet:**  
-  Tallennus- ja latausprosessiin liittyvät visuaaliset ja äänitehosteet antavat selkeän palautteen onnistuneesta toiminnasta.
 
 ---
-
-## Vaatimukset
-
-- **Godot Engine 4.0 tai uudempi**  
-  Lataa ja asenna [Godot Engine](https://godotengine.org/download).
-
----
-
-## Näin avaat ja käynnistät projektin Godotilla
-
-1. **Avaa Godot Editor**  
-   Käynnistä Godot Editor koneellasi.
-2. **Tuo projekti**  
-   Klikkaa Godotin Project Managerissa **"Import"** ja selaa kansioon, jossa `project.godot` sijaitsee.
-3. **Tarkista editorin asetukset (tarvittaessa)**  
-   Varmista, että esimerkiksi `.vscode/settings.json` on ajan tasalla.
-4. **Käynnistä projekti**  
-   Paina F5 tai klikkaa **"Play"** -painiketta pelin suorittamiseksi.
-
-## Testaus ja kehitys
-
-Projektin kehityksessä testaus on ollut kriittisessä roolissa:
-
-- **Eksploratiivinen testaus:**  
-  Kaikkia pelin elementtejä testattiin aktiivisesti, jotta mahdolliset virheet ja poikkeamat havaittiin ajoissa.
-- **Yksikkötestaus:**  
-  Perusmekaniikoita, kuten liikkumista, collisioneita ja tilamuutoksia, testattiin erikseen.
-- **Integraatiotestaus:**  
-  Varmistettiin, että tallennusjärjestelmä, vihollisten tekoäly ja käyttöliittymä toimivat saumattomasti yhdessä.
-- **Suorituskykytestaus:**  
-  Pelin responsiivisuus ja suorituskyky tarkastettiin eri kentillä ja eri tilanteissa.
 
 ## Tekijät ja ohjaus
 
@@ -209,7 +193,6 @@ Projektin kehityksessä testaus on ollut kriittisessä roolissa:
 - **Työn ohjaaja:**  
   Teemu Leppänen
 
-Projekti perustuu laajaan tutkimukseen, Godot-yhteisön resursseihin ja oppimisvideoihin.
 
 ## Lähteet
 
@@ -217,6 +200,3 @@ Projekti perustuu laajaan tutkimukseen, Godot-yhteisön resursseihin ja oppimisv
 - **GodotTutorials – Making a 2D RPG in Godot (YouTube)**
 - **GodotTutorials – 2D RPG Enemy AI in Godot (YouTube)**
 - **GodotTutorials – 2D RPG Mechanics in Godot (YouTube)**
-- **Wikipedia – Godot (game engine)**
-- **Wikipedia – Role-playing video game**
-- **Wikipedia – Exploratory testing**
