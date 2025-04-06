@@ -4,12 +4,13 @@ Tämä on 2D top-down RPG -peli, joka on tehty Godot Engineä käyttäen. Projek
 
 [Projektin tiedostot OneDrivessa](https://unioulu-my.sharepoint.com/:f:/r/personal/t0nian05_students_oamk_fi/Documents/Opinn%C3%A4ytety%C3%B6%20-%20Arena%20Game?csf=1&web=1&e=YLwJug)
 
+---
+
 ## Vaatimukset
 
 - **Godot Engine 4.3 tai uudempi**  
   Lataa ja asenna [Godot Engine](https://godotengine.org/download).
 
----
 
 ## Näin avaat ja käynnistät projektin Godotilla
 
@@ -196,7 +197,7 @@ Tässä osiossa esitellään lyhyesti projektin keskeiset osat ja niiden toteutu
 
 ## Lähteet
 
-- **Godot Engine Documentation**
-- **GodotTutorials – Making a 2D RPG in Godot (YouTube)**
-- **GodotTutorials – 2D RPG Enemy AI in Godot (YouTube)**
-- **GodotTutorials – 2D RPG Mechanics in Godot (YouTube)**
+- [Godot Engine Documentation](https://docs.godotengine.org/en/stable/)
+- [GodotTutorials – Making a 2D RPG in Godot (YouTube)](https://youtu.be/QKgTZWbwD1U?si=j0EnzZ4satHnZYjR)
+- [GodotTutorials – 2D RPG Enemy AI in Godot (YouTube)](https://youtu.be/ow_Lum-Agbs?si=ssrECaODPsY7jTKv)
+- [GodotTutorials – 2D RPG Mechanics in Godot (YouTube)](https://youtu.be/LOhfqjmasi0?si=4cNr2VJv9yd5dUWM)
