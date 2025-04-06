@@ -55,7 +55,7 @@ Tämä projekti on 2D-roolipeli, joka sisältää klassisia RPG-elementtejä:
 - **Käyttöliittymä:** Pelin HUD, inventaario, päävalikko ja kuolemanäkymä ohjaavat pelaajaa pelin aikana.
 - **Tallennusjärjestelmä:** Laadukas tallennus- ja latausjärjestelmä säilyttää pelaajan edistymisen ja pelin tilan.
 
-Projektin tarkoituksena on tuottaa toimiva RPG, joka täyttää kaupallisten roolipelien perusvaatimukset sekä tarjoaa syvällisen katsauksen pelisuunnittelun ja Godot-pelimoottorin hyödyntämiseen.
+Projektin tarkoituksena on tuottaa toimiva RPG, joka täyttää kaupallisten roolipelien perusvaatimukset sekä tarjoaa katsauksen pelisuunnitteluun ja Godot-pelimoottorin hyödyntämiseen.
 
 ---
 
