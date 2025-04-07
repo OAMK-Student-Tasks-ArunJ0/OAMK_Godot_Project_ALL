@@ -1,5 +1,5 @@
-# enemy_state_destroy.gd
-# This state handles the destruction of an enemy.
+# enemy_state_death.gd
+# This state handles the death of an enemy.
 # When triggered (typically when HP is depleted), it plays a death animation,
 # disables collisions, drops items based on defined drop data, and then frees the enemy node.
 
@@ -19,12 +19,12 @@ var _damage_position: Vector2
 var _direction: Vector2
 
 func init() -> void:
-	# Connect to the enemy_destroyed signal to trigger destruction.
-	enemy.enemy_destroyed.connect(_on_enemy_destroyed)
+	# Connect to the enemy_dead signal to trigger death.
+	enemy.enemy_dead.connect(_on_enemy_death)
 	pass
 
 func enter() -> void:
-	# Make the enemy invulnerable during destruction.
+	# Make the enemy invulnerable during death.
 	enemy.invulnerable = true
 	# Calculate knockback direction based on damage position.
 	_direction = enemy.global_position.direction_to(_damage_position)
@@ -44,7 +44,7 @@ func process(_delta: float) -> EnemyState:
 	enemy.velocity -= enemy.velocity * decelerate_speed * _delta
 	return null
 
-func _on_enemy_destroyed(hurt_box: HurtBox) -> void:
+func _on_enemy_death(hurt_box: HurtBox) -> void:
 	_damage_position = hurt_box.global_position
 	state_machine.change_state(self)
 

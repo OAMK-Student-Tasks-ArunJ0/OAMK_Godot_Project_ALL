@@ -1958,10 +1958,10 @@ position = Vector2(0, -61)
 scale = Vector2(2, 2)
 
 [node name="VisionRange" parent="." instance=ExtResource("26_ldp3t")]
-visible = false
 scale = Vector2(2, 2)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisionRange"]
+visible = false
 scale = Vector2(5, 5)
 polygon = PackedVector2Array(-128, -128, 128, -128, 128, 128, -128, 128)
 

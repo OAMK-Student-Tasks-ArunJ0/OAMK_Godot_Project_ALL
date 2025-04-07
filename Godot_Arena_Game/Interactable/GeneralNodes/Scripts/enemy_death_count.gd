@@ -20,7 +20,7 @@ func _on_enemy_destroyed(level_node : Node2D) -> void:
 		# When only one enemy is left (i.e. the one being removed), consider all enemies dead.
 		if enemy_count() <= 1:
 			enemies_dead.emit()
-			print("Enemies in level Dead")
+			###print("Enemies in level Dead")
 	pass
 
 # Returns the number of enemy nodes that are still children of this node.

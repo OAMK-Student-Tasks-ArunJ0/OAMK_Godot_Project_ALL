@@ -77,22 +77,31 @@ func _process(_delta: float) -> void:
 	).normalized()
 	pass
 
+#var print_timer := 0.0
+
 func _physics_process(_delta: float) -> void:
 	# Use built-in move_and_slide for movement.
 	move_and_slide()
+	
+	### Debug-viesti: tulostetaan pelaajan nykyinen sijainti
+	#print_timer -= _delta
+	#if print_timer <= 0:
+	#	# Debug-viesti: tulostetaan pelaajan nykyinen sijainti ja suunta sekunnin välein
+	#	print("DEBUG: Pelaajan sijainti:", position)
+	#	print("DEBUG: Current Direction:", direction)
+	#	print_timer = 1.0
+	
+	pass
 
 func set_direction() -> bool:
 	# If no input, do nothing.
 	if direction == Vector2.ZERO:
 		return false
-	
 	# Calculate an index from the current input direction, adjusted by current facing.
 	var direction_id: int = int(round((direction + cardinal_direction * 0.1).angle() / TAU * DIR_4.size()))
-	var new_dir = DIR_4[direction_id]  # New cardinal direction (0-3).
-	
+	var new_dir = DIR_4[direction_id]
 	if new_dir == cardinal_direction:
 		return false
-	
 	# Update the facing direction and emit a signal.
 	cardinal_direction = new_dir
 	direction_changed.emit(new_dir)
@@ -122,12 +131,20 @@ func _take_damage(hurt_box: HurtBox) -> void:
 		return
 	# Decrease HP based on the damage value.
 	update_hp(-hurt_box.damage)
+	
+	
 	if hp > 1:
 		player_damaged.emit(hurt_box)
+		
+		### DEBUG PLAYER TAKE DAMAGE
+		print("DEBUG: Pelaaja otti ", hurt_box.damage, " vahinkoa!")
 	else:
 		health_regen = false
 		# Emit death signal when HP falls to 0.
 		player_dead.emit(hurt_box)
+		
+		### DEBUG PLAYER DEAD
+		print("DEBUG: Pelaaja kuoli!")
 	pass
 
 func update_hp(delta: int) -> void:

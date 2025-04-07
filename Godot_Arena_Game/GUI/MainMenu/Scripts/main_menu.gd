@@ -10,7 +10,7 @@ extends CanvasLayer
 @onready var save_slot_menu = $Control/SaveSlotMenu
 @onready var settings_menu = $Control/SettingsMenu
 @onready var main_panel: VBoxContainer = $Control/MainPanel
-@onready var prologue = $Control/Prologue
+@onready var tutorial = $Control/Tutorial
 
 func _ready() -> void:
 	# Connect button signals for menu navigation.
@@ -20,9 +20,9 @@ func _ready() -> void:
 	quit_button.pressed.connect(_on_quit_pressed)
 	
 	save_slot_menu.back_pressed.connect(_on_slot_menu_back)
-	save_slot_menu.prologue_started.connect(_on_prologue_started)
+	save_slot_menu.tutorial_started.connect(_on_tutorial_started)
 	
-	prologue.new_game_started.connect(_on_start_new_game)
+	tutorial.new_game_started.connect(_on_start_new_game)
 	
 	settings_menu.back_pressed.connect(_on_settings_back)
 	
@@ -30,7 +30,7 @@ func _ready() -> void:
 	main_panel.visible = true
 	save_slot_menu.visible = false
 	settings_menu.visible = false
-	prologue.visible = false
+	tutorial.visible = false
 	
 	# Enable or disable the continue button based on available saves.
 	update_continue_button()
@@ -71,12 +71,12 @@ func _on_new_game_pressed() -> void:
 	save_slot_menu.visible = true
 	save_slot_menu.slot1_button.grab_focus()
 
-func _on_prologue_started() -> void:
-	# Transition from the save slot menu to the prologue screen.
+func _on_tutorial_started() -> void:
+	# Transition from the save slot menu to the tutorial screen.
 	main_panel.visible = false
 	save_slot_menu.visible = false
-	prologue.visible = true
-	prologue.next_button.grab_focus()
+	tutorial.visible = true
+	tutorial.next_button.grab_focus()
 	
 func _on_start_new_game() -> void:
 	# Begin the new game by loading the first level and setting up the player.

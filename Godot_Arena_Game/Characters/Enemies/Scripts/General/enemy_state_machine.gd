@@ -49,6 +49,9 @@ func change_state(new_state: EnemyState) -> void:
 	if current_state:
 		current_state.exit()
 	
+	### DEBUG
+	#print(get_parent().name, " vaihtoi tilaan ", new_state.name)
+	
 	prev_state = current_state
 	current_state = new_state
 	current_state.enter()

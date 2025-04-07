@@ -8,10 +8,10 @@ class_name Enemy extends CharacterBody2D
 # If true, use full directional animations; if false, use only side sprites.
 @export var side_or_both_animations = true
 
-# Signals for direction changes, when damaged, and when destroyed.
+# Signals for direction changes, when damaged, and when dead.
 signal direction_changed(new_direction: Vector2)
 signal enemy_damaged(hurt_box: HurtBox)
-signal enemy_destroyed(hurt_box: HurtBox)
+signal enemy_dead(hurt_box: HurtBox)
 
 # Define the four cardinal directions.
 const DIR_4 = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
@@ -125,8 +125,14 @@ func _take_damage(hurt_box: HurtBox) -> void:
 	# Emit appropriate signals based on remaining HP.
 	if hp > 0:
 		enemy_damaged.emit(hurt_box)
+		
+		### DEBUG ENEMY TAKE DAMAGE
+		#print("DEBUG: ", name," otti ", hurt_box.damage, " vahinkoa!")
 	else:
-		enemy_destroyed.emit(hurt_box)
+		enemy_dead.emit(hurt_box)
+		
+		### DEBUG PLAYER DEAD
+		#print("DEBUG: ", name," kuoli!")
 
 func update_health_bar() -> void:
 	# Delegate updating the health bar to the EnemyHealthBar node.

@@ -18,6 +18,8 @@ var _animation_finished: bool = false
 # Optional: a separate animation player for boss enemies.
 @export var boss_animation_player: AnimationPlayer = null
 
+var start_position
+
 func init() -> void:
 	# Connect to the enemy's damage signal to trigger hurt.
 	enemy.enemy_damaged.connect(_on_enemy_damaged)
@@ -36,6 +38,9 @@ func enter() -> void:
 	# Play the hurt/hurt animation.
 	enemy.update_animation(anim_name)
 	enemy.animation_player.animation_finished.connect(_on_animation_finished)
+	
+	### DEBUG TESTING
+	#start_position = enemy.position
 	pass
 
 func exit() -> void:
@@ -48,6 +53,7 @@ func exit() -> void:
 func process(_delta: float) -> EnemyState:
 	# Gradually decelerate the knockback.
 	enemy.velocity -= enemy.velocity * decelerate_speed * _delta
+	
 	# Transition to the next state once the animation is finished.
 	if _animation_finished:
 		return next_state
@@ -62,5 +68,9 @@ func _on_enemy_damaged(hurt_box: HurtBox) -> void:
 	pass
 
 func _on_animation_finished(_a: String) -> void:
+	
+	### DEBUG TESTING
+	#print("DEBUG: ", enemy.name, " taaksepusku siirti heitä ", enemy.position.x-start_position.x, " x, ja ", enemy.position.y-start_position.y, " y !")
+	
 	_animation_finished = true
 	pass

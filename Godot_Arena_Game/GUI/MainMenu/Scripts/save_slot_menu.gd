@@ -5,7 +5,7 @@ extends Panel
 
 signal save_selected(slot)
 signal back_pressed
-signal prologue_started
+signal tutorial_started
 
 @onready var slot1_button = $VBoxContainer/Slot1
 @onready var slot2_button = $VBoxContainer/Slot2
@@ -15,8 +15,8 @@ signal prologue_started
 
 # Mode can be "new" or "continue" depending on context.
 var mode: String = "new"
-# Constant for the prologue scene path.
-const PROLOGUE = "res://GUI/MainMenu/Scenes/prologue.tscn"
+# Constant for the tutorial scene path.
+const TUTORIAL = "res://GUI/MainMenu/Scenes/tutorial.tscn"
 
 func _ready() -> void:
 	# Connect each slot button to its selection function.
@@ -61,21 +61,21 @@ func set_mode(new_mode: String) -> void:
 func _on_slot_selected(slot: int) -> void:
 	if mode == "new":
 		# Start a new game in the selected slot.
-		start_prologue(slot)
+		start_tutorial(slot)
 	else:
 		# If continuing, check if the slot has a save.
 		if SaveManager.does_save_exist(slot):
 			continue_game(slot)
 		else:
 			# If empty, treat it as a new game.
-			start_prologue(slot)
+			start_tutorial(slot)
 	
 	save_selected.emit(slot)
 
-func start_prologue(slot: int) -> void:
-	# Set the chosen slot for the new game and emit the prologue_started signal.
+func start_tutorial(slot: int) -> void:
+	# Set the chosen slot for the new game and emit the tutorial_started signal.
 	SaveManager.save_slot_to_save = slot
-	prologue_started.emit()
+	tutorial_started.emit()
 
 func continue_game(slot: int) -> void:
 	# Load the game from the selected save slot.

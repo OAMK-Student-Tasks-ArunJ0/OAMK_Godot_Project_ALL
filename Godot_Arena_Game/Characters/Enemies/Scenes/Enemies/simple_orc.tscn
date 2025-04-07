@@ -1930,10 +1930,11 @@ libraries = {
 position = Vector2(0, -29)
 
 [node name="VisionRange" parent="." instance=ExtResource("21_i3plo")]
-visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisionRange"]
+modulate = Color(0.157606, 0.639619, 0.999461, 1)
 position = Vector2(0, -7)
+scale = Vector2(1.01077, 1)
 polygon = PackedVector2Array(-16, -4, 16, -4, 128, 128, -128, 128)
 
 [node name="EnemyAttackRange" parent="VisionRange" instance=ExtResource("22_mru0h")]

@@ -1,5 +1,5 @@
 # tutorial.gd
-# Presents a multi-page tutorial (or prologue) to explain the game controls and mechanics.
+# Presents a multi-page tutorial to explain the game controls and mechanics.
 
 extends Panel
 
@@ -17,8 +17,8 @@ var current_page = 0
 
 signal new_game_started
 
-@onready var text_label : RichTextLabel = $VBoxContainer/PrologueTextPanel/MarginContainer/PrologueText
-@onready var page_indicator : Label = $VBoxContainer/PrologueTextPanel/PageIndicator
+@onready var text_label : RichTextLabel = $VBoxContainer/TutorialTextPanel/MarginContainer/TutorialText
+@onready var page_indicator : Label = $VBoxContainer/TutorialTextPanel/PageIndicator
 @onready var next_button : Button = $VBoxContainer/HBoxContainer/NextButton
 @onready var skip_button : Button = $VBoxContainer/HBoxContainer/SkipButton
 @onready var back_button : Button = $VBoxContainer/HBoxContainer/BackButton
@@ -37,7 +37,7 @@ func _ready() -> void:
 		back_button.pressed.connect(_on_back_pressed)
 		next_button.grab_focus()
 	else:
-		push_error("Prologue node references not found. Check scene structure.")
+		push_error("Tutorial node references not found. Check scene structure.")
 
 func _on_next_pressed() -> void:
 	# Go to the next page.

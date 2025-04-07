@@ -95,13 +95,13 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 3
 
-[node name="PrologueTextPanel" type="Panel" parent="VBoxContainer"]
+[node name="TutorialTextPanel" type="Panel" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_textbg")
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/PrologueTextPanel"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TutorialTextPanel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -115,14 +115,14 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="PrologueText" type="RichTextLabel" parent="VBoxContainer/PrologueTextPanel/MarginContainer"]
+[node name="TutorialText" type="RichTextLabel" parent="VBoxContainer/TutorialTextPanel/MarginContainer"]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.803922, 0.901961, 0.901961, 1)
 theme_override_font_sizes/normal_font_size = 14
 bbcode_enabled = true
 text = "Tutorial Text"
 
-[node name="PageIndicator" type="Label" parent="VBoxContainer/PrologueTextPanel"]
+[node name="PageIndicator" type="Label" parent="VBoxContainer/TutorialTextPanel"]
 layout_mode = 2
 offset_left = 276.5
 offset_top = 180.0

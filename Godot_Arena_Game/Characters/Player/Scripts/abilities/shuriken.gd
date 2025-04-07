@@ -47,7 +47,6 @@ func _physics_process(delta: float) -> void:
 func throw(throw_direction: Vector2) -> void:
 	# Initialize the shuriken's damage.
 	shuriken_hurt_box.init_damage(player.ranged_damage)
-	print("shuriken damage is " + str(shuriken_hurt_box.damage))
 	direction = throw_direction
 	speed = max_speed
 	state = State.THROW

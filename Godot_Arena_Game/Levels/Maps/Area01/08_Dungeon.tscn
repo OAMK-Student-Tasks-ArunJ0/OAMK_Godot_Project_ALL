@@ -81,7 +81,7 @@ position = Vector2(80, 337)
 scale = Vector2(2, 2)
 
 [node name="Chest" parent="." instance=ExtResource("15_yqfbx")]
-position = Vector2(0, 140)
+position = Vector2(-1, 140)
 quantity = 60
 
 [connection signal="activated" from="BodySensor" to="ClosedDoor" method="open_door"]

@@ -39,7 +39,6 @@ var new_game_save : Dictionary = {
 	},
 	items = [],
 	persistence = [],
-	quests = [],
 }
 
 # Default settings for audio volumes.
