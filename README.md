@@ -204,12 +204,12 @@ Tässä osiossa esitellään lyhyesti projektin keskeiset osat ja niiden toteutu
 
 ## Resurssit
 
-https://free-game-assets.itch.io/free-paint-pixel-art-icon-pack
-https://kronbits.itch.io/freesfx
-https://free-game-assets.itch.io/free-undead-loot-pixel-art-icons
-https://free-game-assets.itch.io/48-free-rpg-loot-icons-pixel-art
-https://brackeysgames.itch.io/brackeys-platformer-bundle
-https://bdragon1727.itch.io/pixel-shuriken-32x32
-https://admurin.itch.io/monster-pack
-https://free-game-assets.itch.io/free-top-down-orc-game-character-pixel-art
-https://free-game-assets.itch.io/free-base-4-direction-male-character-pixel-art
+- https://free-game-assets.itch.io/free-paint-pixel-art-icon-pack
+- https://kronbits.itch.io/freesfx
+- https://free-game-assets.itch.io/free-undead-loot-pixel-art-icons
+- https://free-game-assets.itch.io/48-free-rpg-loot-icons-pixel-art
+- https://brackeysgames.itch.io/brackeys-platformer-bundle
+- https://bdragon1727.itch.io/pixel-shuriken-32x32
+- https://admurin.itch.io/monster-pack
+- https://free-game-assets.itch.io/free-top-down-orc-game-character-pixel-art
+- https://free-game-assets.itch.io/free-base-4-direction-male-character-pixel-art
